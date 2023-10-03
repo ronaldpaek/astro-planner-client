@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  .navbar-li {
+    color: #fff;
+  }
+}

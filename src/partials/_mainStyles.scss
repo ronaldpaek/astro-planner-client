@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+body {
+  background-color: $primary-black;
+}
+
+.flex {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
