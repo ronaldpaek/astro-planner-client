@@ -1,12 +1,59 @@
-@use './variables' as *;
-@import './mediaqueries';
+@use './variables' as v;
+@use './mixins' as m;
+@use './functions' as f;
+
+// Usage of mixins and variables
+h1 {
+  @include m.bold;
+  font-size: f.rem(v.$font-size-h1); // Convert to rems
+}
+
+h2 {
+  @include m.medium;
+  font-size: f.rem(v.$font-size-h2); // Convert to rems
+}
+
+h3 {
+  @include m.medium;
+  font-size: f.rem(v.$font-size-h3); // Convert to rems
+}
+
+h4 {
+  @include m.medium;
+  font-size: f.rem(v.$font-size-h4); // Convert to rems
+}
+
+p {
+  margin-top: 0;
+  @include m.regular;
+  font-size: f.rem(v.$font-size-p); // Convert to rems
+}
+
+li {
+  margin-top: 0;
+  @include m.regular;
+  font-size: f.rem(v.$font-size-li); // Convert to rems
+}
+
+a,
+a:visited,
+a:active {
+  @include m.regular;
+  font-size: f.rem(v.$font-size-p);
+  color: v.$color-dark;
+  text-decoration: none;
+  &:hover {
+    color: v.$color-dark;
+    text-decoration: none;
+  }
+}
 
 html {
-  font-size: 62.5%; /* 1rem = 10px (assuming base font size is 16px) */
+  font-size: 100%;
 }
 
 body {
-  background-color: $primary-black;
+  background-color: v.$color-light;
 }
 
 .flex {
@@ -19,13 +66,13 @@ li {
   list-style-type: none;
 }
 
-@include breakpoint('medium') {
+@include m.breakpoint('small') {
   .flex {
     flex-direction: column;
   }
 }
 
-@include breakpoint('large') {
+@include m.breakpoint('small') {
   .navbar {
     flex-direction: column;
     align-items: center;

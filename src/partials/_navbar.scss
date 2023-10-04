@@ -1,9 +1,19 @@
-@use './variables' as *;
+@use './variables' as v;
+@use './mixins' as m;
 
-.navbar {
+.navbar-list {
   display: flex;
   justify-content: space-around;
   .navbar-li {
-    color: #fff;
+    color: v.$color-dark;
+    .logo {
+      background-color: v.$primary-blue;
+      display: flex;
+      padding: 8px 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+    }
   }
 }

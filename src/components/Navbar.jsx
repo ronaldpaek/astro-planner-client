@@ -1,15 +1,15 @@
 import React from 'react';
-import logo from '../assets/logo icon.svg';
-import bell from '../assets/notification.svg';
-import userPhoto from '../assets/userPhoto.png';
+import airplaneLogo from '../assets/logo icon.svg';
+import notificationIcon from '../assets/notification.svg';
+import userProfilePhoto from '../assets/userPhoto.png';
 
 export const Navbar = () => {
   return (
-    <nav className="navbar-container">
-      <ul className="navbar">
+    <nav className="main-navbar">
+      <ul className="navbar-list">
         <div className="flex">
           <li className="navbar-li">
-            <img src={logo} alt="airplane-logo" />
+            <img className="logo" src={airplaneLogo} alt="airplane-logo" />
           </li>
           <li className="navbar-li">Wander Whisper Travels</li>
         </div>
@@ -22,10 +22,10 @@ export const Navbar = () => {
           <li className="navbar-li">USD</li>
           <li className="navbar-li">FAQ</li>
           <li className="navbar-li">
-            <img src={bell} alt="notifications" />
+            <img src={notificationIcon} alt="notifications" />
           </li>
           <li className="navbar-li">
-            <img src={userPhoto} alt="user profile photo" />
+            <img src={userProfilePhoto} alt="user profile photo" />
           </li>
         </div>
       </ul>

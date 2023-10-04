@@ -1,32 +1,41 @@
-@use './variables' as v;
-@use './mixins' as m;
-
-// Usage of mixins and variables
-h1 {
-  @include m.regular;
-  font-size: v.$font-size-large / 10rem;
+// Mixin for regular text styles
+@mixin regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
-h2 {
-  @include m.medium;
-  font-size: v.$font-size-medium / 10rem;
+// Mixin for medium text styles
+@mixin medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
-p {
-  margin-top: 0;
-  @include m.regular;
-  font-size: v.$font-size-small / 10rem;
+// Mixin for bold text styles
+@mixin bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
-a,
-a:visited,
-a:active {
-  @include m.regular;
-  font-size: v.$font-size-small / 10rem;
-  color: v.$primary-white;
-  text-decoration: none;
-  &:hover {
-    color: v.$primary-white;
-    text-decoration: none;
+@mixin button-styles {
+  background-color: $primary-blue;
+  color: $color-light;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+// Mixin to handle breakpoints
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == 'small' {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == 'medium' {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media (max-width: 1440px) {
+      @content;
+    }
   }
 }
