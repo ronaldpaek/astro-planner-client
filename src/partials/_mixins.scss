@@ -1,0 +1,32 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+// Usage of mixins and variables
+h1 {
+  @include m.regular;
+  font-size: v.$font-size-large / 10rem;
+}
+
+h2 {
+  @include m.medium;
+  font-size: v.$font-size-medium / 10rem;
+}
+
+p {
+  margin-top: 0;
+  @include m.regular;
+  font-size: v.$font-size-small / 10rem;
+}
+
+a,
+a:visited,
+a:active {
+  @include m.regular;
+  font-size: v.$font-size-small / 10rem;
+  color: v.$primary-white;
+  text-decoration: none;
+  &:hover {
+    color: v.$primary-white;
+    text-decoration: none;
+  }
+}

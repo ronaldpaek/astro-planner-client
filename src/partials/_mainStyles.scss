@@ -1,4 +1,9 @@
 @use './variables' as *;
+@import './mediaqueries';
+
+html {
+  font-size: 62.5%; /* 1rem = 10px (assuming base font size is 16px) */
+}
 
 body {
   background-color: $primary-black;
@@ -12,4 +17,20 @@ body {
 
 li {
   list-style-type: none;
+}
+
+@include breakpoint('medium') {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@include breakpoint('large') {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    .navbar-li {
+      margin: 10px 0;
+    }
+  }
 }

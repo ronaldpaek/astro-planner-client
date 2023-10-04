@@ -1,0 +1,26 @@
+@use './variables' as v;
+
+h1 {
+  font-size: v.$font-size-large / 10rem; /* 1rem = 10px */
+}
+
+h2 {
+  font-size: v.$font-size-medium / 10rem;
+}
+
+p {
+  margin-top: 0;
+  font-size: v.$font-size-small / 10rem;
+}
+
+a,
+a:visited,
+a:active {
+  font-size: v.$font-size-small / 10rem;
+  color: v.$text-color-light;
+  text-decoration: none;
+  &:hover {
+    color: v.$text-color-light;
+    text-decoration: none;
+  }
+}
