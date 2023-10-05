@@ -1,0 +1,37 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+.social-button {
+  @include m.social-button;
+}
+.signup-container {
+  border-radius: 20px;
+  box-shadow: v.$box-shadow-small;
+  max-width: 500px;
+  padding: 48px 10px;
+}
+
+span {
+  color: v.$primary-blue;
+}
+.signin-button {
+  @include m.signin-button;
+}
+
+label {
+  color: #353945;
+  font-family: inter;
+  text-align: left;
+}
+
+input {
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 6px;
+  border: 1px solid #b1b5c3;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}

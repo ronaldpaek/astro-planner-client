@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Navbar } from './components/Navbar';
+import { Navbar } from '@/components/Navbar';
+import { Signup } from '@/components/Signup';
 import './App.scss';
 
 function App() {
@@ -7,10 +8,9 @@ function App() {
     <>
       <div>
         <Navbar />
-        <h1>hello</h1>
+        <Signup />
       </div>
     </>
   );
 }
-
 export default App;
