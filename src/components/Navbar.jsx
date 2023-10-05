@@ -1,8 +1,9 @@
-import React from "react";
-import airplaneLogo from "../assets/logo icon.svg";
-import notificationIcon from "../assets/notification.svg";
-import userProfilePhoto from "../assets/userPhoto.png";
+import React from 'react';
+import airplaneLogo from '@/assets/logo icon.svg';
+import notificationIcon from '@/assets/notification.svg';
+import userProfilePhoto from '@/assets/userPhoto.png';
 import { Link } from "react-router-dom";
+
 
 export const Navbar = ({ user, setToken, setUser }) => {
   function handleLogout() {
