@@ -1,7 +1,7 @@
 import React from 'react';
-import airplaneLogo from '../assets/logo icon.svg';
-import notificationIcon from '../assets/notification.svg';
-import userProfilePhoto from '../assets/userPhoto.png';
+import airplaneLogo from '@/assets/logo icon.svg';
+import notificationIcon from '@/assets/notification.svg';
+import userProfilePhoto from '@/assets/userPhoto.png';
 
 export const Navbar = () => {
   return (
