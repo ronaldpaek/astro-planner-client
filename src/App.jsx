@@ -1,7 +1,10 @@
-import { useState } from "react";
-import { Navbar } from "./components/Navbar";
+
+import { useState } from 'react';
+import { Navbar } from '@/components/Navbar';
+import { Signup } from '@/components/Signup';
 import { Outlet } from "react-router-dom";
-import "./App.scss";
+import './App.scss';
+
 
 function App() {
   const [user, setUser] = useState({});
@@ -33,12 +36,15 @@ function App() {
   return (
     <>
       <div>
+
+        <Signup />
+
         <Navbar user={user} setToken={setToken} setUser={setUser} />
         <Outlet context={{ setToken, user }} />
         <h1>hello</h1>
+
       </div>
     </>
   );
 }
-
 export default App;
