@@ -5,7 +5,7 @@ import {
   BiLogoTwitter,
 } from 'react-icons/bi';
 
-export const Signup = () => {
+const Login = () => {
   return (
     <div className="signup-container flex-col">
       <div className="wrapper">
@@ -72,3 +72,4 @@ export const Signup = () => {
     </div>
   );
 };
+export default Login;

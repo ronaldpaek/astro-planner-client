@@ -1,50 +1,27 @@
+// import { Navbar } from '@/components/Navbar';
 
-import { useState } from 'react';
-import { Navbar } from '@/components/Navbar';
-import { Signup } from '@/components/Signup';
-import { Outlet } from "react-router-dom";
 import './App.scss';
 
+import React, { useState } from 'react';
+import DesktopNavigation from './components/DesktopNavigation';
+import MobileNavigation from './components/DesktopNavigation';
 
 function App() {
-  const [user, setUser] = useState({});
-  const [token, setToken] = useState("");
+  const [showNavbar, setShowNavbar] = useState(false);
 
-  async function fetchUser() {
-    const localToken = localStorage.getItem("token");
-    if (localToken) {
-      setToken(localToken);
-    }
-    if (!token) {
-      return;
-    }
-    const res = await fetch(`${API}/users/token`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    const info = await res.json();
-    if (info.success) {
-      setUser(info.user);
-    }
-  }
-
-  useEffect(() => {
-    fetchUser();
-  }, [token]);
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
 
   return (
-    <>
-      <div>
-
-        <Signup />
-
-        <Navbar user={user} setToken={setToken} setUser={setUser} />
-        <Outlet context={{ setToken, user }} />
-        <h1>hello</h1>
-
-      </div>
-    </>
+    <div>
+      {window.innerWidth < 768 ? (
+        <MobileNavigation handleShowNavbar={handleShowNavbar} />
+      ) : (
+        <DesktopNavigation handleShowNavbar={handleShowNavbar} />
+      )}
+    </div>
   );
 }
+
 export default App;
