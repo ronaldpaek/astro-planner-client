@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.icon {
+  display: none;
+}
+
 .text {
   color: v.$color-dark;
 }
@@ -15,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0;
 
   .navbar-center,
   .navbar-right {
@@ -24,10 +29,6 @@
     .navbar-li {
       margin: 0 10px;
       color: v.$color-dark;
-
-      .icon {
-        display: none;
-      }
 
       span {
         color: v.$color-dark;
@@ -54,22 +55,6 @@
   right: 4em;
 }
 
-.dark {
-  background-color: v.$primary-black;
-  color: #fff;
-
-  .navbar-li a,
-  .toggle-switch a,
-  .text {
-    color: #fff !important;
-
-    .icon {
-      display: inline-block;
-      margin-right: 8px;
-    }
-  }
-}
-
 @include m.breakpoint('small') {
   .navbar-list {
     margin: 0;
@@ -82,9 +67,36 @@
     }
   }
 
+  toggle-switch {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+    top: 1.25em;
+    right: 4em;
+  }
   .navbar-list-fullwidth {
-    flex-direction: column; /* Stack items vertically on mobile */
-    width: 100%; /* Make it full width */
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start !important;
+    padding: 10px;
+    .logo-icon {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+      position: fixed;
+      z-index: 1;
+      cursor: pointer;
+      top: 1.25em;
+      left: 2em;
+    }
+
+    .navbar-li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 
   .nav-elements {
@@ -113,7 +125,6 @@
       padding: 16px 16px 16px 16px !important;
       position: relative;
       color: v.$primary-black;
-      display: block;
       border-bottom: solid 1px v.$color-dark;
       width: 100% !important;
       box-sizing: border-box !important;
@@ -121,38 +132,27 @@
       .desktop-navigation .navbar-li {
         border-bottom: none;
       }
+    }
 
-      .dark & {
-        background-color: v.$primary-black;
-        color: #fff;
+    .icon {
+      display: inline-block;
+      margin-right: 8px;
+    }
 
-        .navbar-li a,
-        .toggle-switch a {
-          color: #fff;
+    .dark .text {
+      color: #fff;
+    }
 
-          .icon {
-            display: inline-block;
-            margin-right: 8px;
-          }
-        }
-      }
-
-      .icon {
-        display: inline-block;
-        margin-right: 8px;
-      }
-
-      .dark .text {
-        color: #fff;
-      }
+    .hide {
+      display: none;
     }
   }
+}
 
-  .menu-icon {
-    display: block;
-  }
+.menu-icon {
+  display: block;
+}
 
-  .nav-elements.active {
-    display: none;
-  }
+.nav-elements.active {
+  display: block;
 }
