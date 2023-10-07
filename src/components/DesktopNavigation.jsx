@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DarkModeToggle from './DarkModeToggle';
 import airplaneLogo from '@/assets/logo icon.svg';
@@ -14,7 +15,12 @@ import {
   FaQuestion,
 } from 'react-icons/fa';
 
-const DesktopNavigation = ({ handleShowNavbar }) => {
+const DesktopNavigation = () => {
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
   return (
     <nav className="desktop-navigation">
       <ul className="navbar-list">
@@ -23,17 +29,12 @@ const DesktopNavigation = ({ handleShowNavbar }) => {
             <li className="navbar-li">
               <img className="logo" src={airplaneLogo} alt="airplane-logo" />
             </li>
-            <li className="navbar-li">Wander Whisper Travels</li>
+            <li style={{ fontWeight: 'bold' }} className="navbar-li">
+              Wander Whisper Travels
+            </li>
           </Link>
         </div>
-        <div className="flex">
-          <DarkModeToggle />
-          <AiOutlineMenu
-            className="menu-icon"
-            size={30}
-            onClick={handleShowNavbar}
-          />
-        </div>
+
         <div className="navbar-list-fullwidth">
           <li className="navbar-li">
             <Link to={'/'}>
@@ -60,7 +61,7 @@ const DesktopNavigation = ({ handleShowNavbar }) => {
             </Link>
           </li>
         </div>
-        <div className="flex">
+        <div className="navbar-list-fullwidth">
           <li className="navbar-li">
             <Link to={'/usd'}>
               <FaDollarSign className="icon" />
@@ -81,6 +82,21 @@ const DesktopNavigation = ({ handleShowNavbar }) => {
           <li className="navbar-li">
             <img src={userProfilePhoto} alt="user profile photo" />
           </li>
+        </div>
+        <div className="flex">
+          <DarkModeToggle />
+          <AiOutlineMenu
+            className="menu-icon"
+            size={30}
+            onClick={handleShowNavbar}
+          />
+        </div>
+        <div className="flex">
+          <AiOutlineMenu
+            className="menu-icon"
+            size={30}
+            onClick={handleShowNavbar}
+          />
         </div>
       </ul>
     </nav>

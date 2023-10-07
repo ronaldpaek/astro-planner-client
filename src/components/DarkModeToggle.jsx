@@ -1,4 +1,3 @@
-// DarkModeToggle.js
 import React, { useState, useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
@@ -18,11 +17,11 @@ const DarkModeToggle = () => {
   }, [isDarkMode]);
 
   return (
-    <div className="dark-mode-toggle">
+    <div className="dark-mode-toggle" onClick={toggleDarkMode}>
       {isDarkMode ? (
-        <FaSun className="toggle-switch" size={30} onClick={toggleDarkMode} />
+        <FaSun className="toggle-switch" size={30} />
       ) : (
-        <FaMoon className="toggle-switch" size={30} onClick={toggleDarkMode} />
+        <FaMoon className="toggle-switch" size={30} />
       )}
     </div>
   );
