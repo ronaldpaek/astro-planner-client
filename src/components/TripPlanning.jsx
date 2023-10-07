@@ -1,28 +1,30 @@
-import React from "react";
-import lightIcon from "@/assets/lightIcon.svg";
-import websiteIcon from "@/assets/websiteIcon.svg";
-import eBookIcon from "@/assets/eBookIcon.svg";
-import rightArrow from "@/assets/rightArrow.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import lightIcon from '@/assets/lightIcon.svg';
+import websiteIcon from '@/assets/websiteIcon.svg';
+import eBookIcon from '@/assets/eBookIcon.svg';
+import rightArrow from '@/assets/rightArrow.svg';
+import { Link } from 'react-router-dom';
 
 export default function TripPlanning() {
   return (
     <div className="trip-container">
       <div className="trip-planning">
-        <h1>Innovative Trip Planning</h1>
-        <p>
-          Our vision is to revolutionaize the way people travel by <br />{" "}
+        <h1 className="text">Innovative Trip Planning</h1>
+        <p className="text">
+          Our vision is to revolutionaize the way people travel by <br />{' '}
           introducing intelligent trip planning
         </p>
       </div>
       <div className="card-container">
         <div className="cardOne">
           <div className="lightIcon">
-            <img src={lightIcon} alt="light icon" />{" "}
+            <img src={lightIcon} alt="light icon" />{' '}
           </div>
-          <p className="wrapper">
-            Partner allows you to browse multiple carriers for travel.
-          </p>
+          <div className="wrapper">
+            <p className="text">
+              Partner allows you to browse multiple carriers for travel.
+            </p>
+          </div>
           <Link to="/">
             <div className="learnMore">
               <p id="learnMoreText">Learn more</p>
@@ -34,10 +36,12 @@ export default function TripPlanning() {
           <div className="websiteIcon">
             <img src={websiteIcon} alt="website icon" />
           </div>
-          <p className="wrapper">
-            The website is a way for partners to communicate with their
-            customers.
-          </p>
+          <div className="wrapper">
+            <p className="text">
+              The website is a way for partners to communicate with their
+              customers.
+            </p>
+          </div>
           <Link to="/">
             <div className="learnMore">
               <p id="learnMoreText">Learn more</p>
@@ -49,9 +53,11 @@ export default function TripPlanning() {
           <div className="eBookIcon">
             <img src={eBookIcon} alt="website icon" />
           </div>
-          <p className="wrapper">
-            The ebook Reader is a new way to look at e-books.
-          </p>
+          <div className="wrapper">
+            <p className="text">
+              The ebook Reader is a new way to look at e-books.
+            </p>
+          </div>
           <Link to="/">
             <div className="learnMore">
               <p id="learnMoreText">Learn more</p>
