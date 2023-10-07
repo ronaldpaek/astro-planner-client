@@ -7,8 +7,8 @@ import {
 
 const Login = () => {
   return (
-    <div className="signup-container flex-col">
-      <div className="wrapper">
+    <div className="form-wrapper">
+      <div className="signup-container flex-col">
         <h2>Get started</h2>
         <p className="text-gray">
           Don't have an account? <span className="signup-link">Sign up</span>
@@ -39,21 +39,21 @@ const Login = () => {
             type="text"
             name="firstName"
             id="firstName"
-            placeholder="Mitchel"
+            placeholder="Enter Your First Name"
           />
           <label htmlFor="lastName">Last Name</label>
           <input
             type="text"
             name="lastName"
             id="lastName"
-            placeholder="Smith"
+            placeholder="Enter Your Last Name"
           />
           <label htmlFor="email">Email</label>
           <input
             type="text"
             name="email"
             id="email"
-            placeholder="uihutofficial@gmail.com"
+            placeholder="Enter Your Email"
           />
           <label htmlFor="password">Password</label>
           <input
@@ -63,10 +63,13 @@ const Login = () => {
             placeholder="********"
           />
           <div className="flex">
-            <p className="remember-me">Remember me</p>
-            <p className="forgot-password">Forgot Password?</p>
+            <label htmlFor="checkbox flex">
+              <input type="checkbox" />
+              Remember me
+            </label>
+            <span className="forgot-password">Forgot Password?</span>
           </div>
-          <button className="signin-button">Sign in</button>
+          <button className="signin-button">sign in</button>
         </form>
       </div>
     </div>
