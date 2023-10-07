@@ -5,6 +5,7 @@ import './App.scss';
 import React, { useState } from 'react';
 import DesktopNavigation from './components/DesktopNavigation';
 import MobileNavigation from './components/DesktopNavigation';
+import Footer from '@/components/Footer';
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -14,13 +15,16 @@ function App() {
   };
 
   return (
-    <div>
-      {window.innerWidth < 768 ? (
-        <MobileNavigation handleShowNavbar={handleShowNavbar} />
-      ) : (
-        <DesktopNavigation handleShowNavbar={handleShowNavbar} />
-      )}
-    </div>
+    <>
+      <div>
+        {window.innerWidth < 768 ? (
+          <MobileNavigation handleShowNavbar={handleShowNavbar} />
+        ) : (
+          <DesktopNavigation handleShowNavbar={handleShowNavbar} />
+        )}
+      </div>
+      <Footer />
+    </>
   );
 }
 
