@@ -14,8 +14,9 @@ import {
   FaDollarSign,
   FaQuestion,
 } from 'react-icons/fa';
+import logoIcon from '@/assets/moon-logo-v2.svg';
 
-const DesktopNavigation = () => {
+const Navigation = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
@@ -27,10 +28,15 @@ const DesktopNavigation = () => {
         <div className="flex">
           <Link to="/" className="flex">
             <li className="navbar-li">
-              <img className="logo" src={airplaneLogo} alt="airplane-logo" />
+              <img
+                className="logo-icon"
+                src={logoIcon}
+                size={24}
+                alt="airplane-logo"
+              />
             </li>
             <li style={{ fontWeight: 'bold' }} className="navbar-li">
-              Wander Whisper Travels
+              Astro Planner
             </li>
           </Link>
         </div>
@@ -103,4 +109,4 @@ const DesktopNavigation = () => {
   );
 };
 
-export default DesktopNavigation;
+export default Navigation;
