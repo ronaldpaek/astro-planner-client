@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import MobileNavigation from './components/Navigation';
 import Footer from '@/components/Footer';
+import TwoWeekTripPlan from '@/components/TwoWeekTripPlan';
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -23,6 +24,7 @@ function App() {
           <Navigation handleShowNavbar={handleShowNavbar} />
         )}
       </div>
+      <TwoWeekTripPlan />
       <Footer />
     </>
   );
