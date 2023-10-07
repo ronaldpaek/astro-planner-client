@@ -15,7 +15,7 @@ const cardItems = [
     title: 'Check Your Route',
     image: avatar1,
     personName: 'Rebecca',
-    infoChip: '13 Days, 6 hours',
+    infoChip: '13 days, 6 hours',
     buttonText: 'Check Now',
   },
   {
@@ -23,7 +23,7 @@ const cardItems = [
     title: 'Set Day by Day Plan',
     image: avatar2,
     personName: 'Coleman',
-    infoChip: 'Day by day',
+    infoChip: 'day by day',
     buttonText: 'Check Now',
   },
   {
@@ -31,15 +31,15 @@ const cardItems = [
     title: 'Choose the Checklist',
     image: avatar3,
     personName: 'Kermit',
-    infoChip: '1 Day full view',
+    infoChip: '1 day full view',
     buttonText: 'Check Now',
   },
   {
     Icon: <BiHomeAlt className="card-icon" />,
-    title: 'Specify Where to stay',
+    title: 'Specify Where to Stay',
     image: avatar4,
     personName: 'Seth',
-    infoChip: 'Hotel view',
+    infoChip: 'hotel view',
     buttonText: 'Check Now',
   },
 ];
@@ -70,15 +70,17 @@ const TwoWeekTripPlan = () => {
                 <div className="card-content-container">
                   <div className="card-info-container">
                     <h3 className="card-title">{item.title}</h3>
-                    <div className="avatar-container">
-                      <img
-                        src={item.image}
-                        alt="avatar"
-                        className="card-avatar"
-                      />
-                      <p className="card-person-name">{item.personName}</p>
+                    <div className="user-content-container">
+                      <div className="avatar-container">
+                        <img
+                          src={item.image}
+                          alt="avatar"
+                          className="card-avatar"
+                        />
+                        <p className="card-person-name">{item.personName}</p>
+                      </div>
+                      <span className="card-info-chip">{item.infoChip}</span>
                     </div>
-                    <span className="card-info-chip">{item.infoChip}</span>
                   </div>
                   <button className="card-button">{item.buttonText}</button>
                 </div>
