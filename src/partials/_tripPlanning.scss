@@ -1,0 +1,78 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+//@include m.breakpoint('small') {
+    .trip-container{
+        margin: 50px;
+    }
+
+.trip-planning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+  }
+  .card-container{
+    display: flex;
+    justify-content: center;
+    gap:50px
+  }
+//}
+
+  .cardOne, .cardTwo, .cardThree{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 272px;
+    height: 236px;
+    text-align: center;
+  }
+  .cardOne{
+    background-color: v.$secondary-green;
+  }
+  .cardTwo{
+    background-color: #FFF4EE;
+  }
+  .cardThree{
+    background-color: #EBF1FF;
+  }
+
+.lightIcon, .websiteIcon, .eBookIcon {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.lightIcon {
+    background-color: v.$success-color;
+}
+
+.websiteIcon{
+    background-color: v.$secondary-orange;
+}
+
+.eBookIcon{
+    background-color: v.$primary-blue;
+}
+
+.learnMore{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+#learnMoreText{
+    margin: 0;
+}
+
+p{
+    text-align: center;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
