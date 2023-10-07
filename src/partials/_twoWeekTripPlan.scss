@@ -5,6 +5,9 @@
   background-color: #f7f3cd;
   padding-inline: 24px;
   padding-top: 20px;
+  @media (min-width: 768px) {
+    padding-top: 100px;
+  }
 }
 
 .trip-plan-container {
@@ -43,12 +46,6 @@
   }
 }
 
-.trip-plan-button {
-  width: fit-content;
-  padding: 4px 8px;
-  border-radius: v.$border-radius;
-}
-
 .trip-plan-description {
   font-size: 10px;
   line-height: 1.77;
@@ -60,12 +57,19 @@
 
 .trip-plan-button {
   background-color: v.$primary-blue;
-  border-radius: v.$border-radius;
-  padding: 8px 20px;
+  border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 700;
   color: #ffffff;
   border: none;
+  line-height: normal;
+  padding: 8px 20px;
+  align-self: flex-start;
+  @media (min-width: 1024px) {
+    font-size: 0.875rem;
+    padding: 8px 28px;
+    line-height: 1.5;
+  }
 }
 
 .card {
@@ -132,6 +136,7 @@
 .card-person-name {
   font-size: 8px;
   color: v.$color-gray-3;
+  margin: 0;
 }
 
 .card-info-chip {
@@ -147,10 +152,6 @@
   margin: 0;
 }
 
-.card-person-name {
-  margin: 0;
-}
-
 .card-button {
   background-color: #fee9dd;
   color: #fa8f54;
@@ -161,9 +162,6 @@
   align-self: flex-start;
   margin-top: 6px;
   border: none;
-  @media (min-width: 1024px) {
-    margin-block: auto;
-  }
 }
 
 .card-avatar {
@@ -181,10 +179,6 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  // @media (min-width: 1024px) {
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr;
-  // }
 }
 
 .user-content-container {
