@@ -3,8 +3,8 @@
 import './App.scss';
 
 import React, { useState } from 'react';
-import DesktopNavigation from './components/DesktopNavigation';
-import MobileNavigation from './components/DesktopNavigation';
+import Navigation from './components/Navigation';
+import MobileNavigation from './components/Navigation';
 import Footer from '@/components/Footer';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         {window.innerWidth < 768 ? (
           <MobileNavigation handleShowNavbar={handleShowNavbar} />
         ) : (
-          <DesktopNavigation handleShowNavbar={handleShowNavbar} />
+          <Navigation handleShowNavbar={handleShowNavbar} />
         )}
       </div>
       <Footer />
