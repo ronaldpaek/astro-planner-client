@@ -4,6 +4,15 @@
 .social-button {
   @include m.social-button;
 }
+
+.form-wrapper {
+  display: flex;
+  height: 1024px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .signup-container {
   border-radius: 20px;
   box-shadow: v.$box-shadow-small;
@@ -22,6 +31,12 @@ label {
   color: #353945;
   font-family: inter;
   text-align: left;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
 }
 
 input {
