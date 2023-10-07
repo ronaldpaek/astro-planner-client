@@ -17,9 +17,15 @@
   border-radius: 20px;
   box-shadow: v.$box-shadow-small;
   max-width: 500px;
-  padding: 48px 10px;
+  padding: 48px 30px;
 }
 
+.dark signup-container {
+  border-radius: 20px;
+  box-shadow: 0px 20px 60px -6px rgba(40, 40, 40, 0.08);
+  max-width: 500px;
+  padding: 48px 10px;
+}
 span {
   color: v.$primary-blue;
 }
