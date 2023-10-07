@@ -1,40 +1,35 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-.desktop-navigation {
+.navbar-list-fullwidth {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.text {
+  color: v.$color-dark;
+}
+
+.logo {
+  background-color: v.$primary-blue;
+  display: flex;
+  padding: 8px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  .icon {
+    display: none;
+  }
+}
+
+.navbar-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .navbar-center {
-    display: flex;
-    align-items: center;
-
-    .navbar-li {
-      margin: 0 10px;
-      color: v.$color-dark;
-
-      .logo {
-        background-color: v.$primary-blue;
-        display: flex;
-        padding: 8px 10px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 12px;
-        padding: 0;
-      }
-
-      .icon {
-        display: none;
-      }
-
-      span {
-        color: v.$color-dark;
-      }
-    }
-  }
-
+  .navbar-center,
   .navbar-right {
     display: flex;
     align-items: center;
@@ -65,10 +60,11 @@
 .toggle-switch {
   display: flex;
   align-items: center;
-  position: absolute;
-  right: 60px;
-  top: 20px;
+  position: fixed;
+  z-index: 1;
   cursor: pointer;
+  top: 1.25em;
+  right: 4em;
 }
 
 .dark {
@@ -90,15 +86,20 @@
 @include m.breakpoint('small') {
   .navbar-list {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    li.navbar-li {
+      margin-top: 0;
+      padding: 0;
+    }
   }
-  li.navbar-li {
-    margin-top: 0;
-    padding: 0;
-  }
+
   .navbar-list-fullwidth {
     flex-direction: column; /* Stack items vertically on mobile */
     width: 100%; /* Make it full width */
   }
+
   .nav-elements {
     position: absolute;
     right: 0;
@@ -109,9 +110,11 @@
     overflow: hidden;
     transform: translateX(0);
   }
+
   .navbar-list {
     padding-left: 0;
   }
+
   .desktop-navigation {
     flex-direction: column;
     align-items: flex-start;
@@ -120,13 +123,17 @@
     padding-left: 0;
 
     .navbar-li {
-      padding: 16px 16px 16px 16px;
+      padding: 16px 16px 16px 16px !important;
       position: relative;
       color: v.$primary-black;
       display: block;
       border-bottom: solid 1px v.$color-dark;
       width: 100% !important;
       box-sizing: border-box !important;
+
+      .desktop-navigation .navbar-li {
+        border-bottom: none;
+      }
 
       .dark & {
         background-color: v.$primary-black;
