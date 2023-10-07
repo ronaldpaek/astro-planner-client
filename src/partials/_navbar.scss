@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.icon {
+  display: none;
+}
+
 .text {
   color: v.$color-dark;
 }
@@ -15,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0;
 
   .navbar-center,
   .navbar-right {
@@ -24,10 +29,6 @@
     .navbar-li {
       margin: 0 10px;
       color: v.$color-dark;
-
-      .icon {
-        display: none;
-      }
 
       span {
         color: v.$color-dark;
@@ -60,11 +61,12 @@
 
   .navbar-li a,
   .toggle-switch a,
-  .text {
+  .text,
+  .logo-type {
     color: #fff !important;
 
     .icon {
-      display: inline-block;
+      display: none;
       margin-right: 8px;
     }
   }
@@ -83,8 +85,20 @@
   }
 
   .navbar-list-fullwidth {
-    flex-direction: column; /* Stack items vertically on mobile */
-    width: 100%; /* Make it full width */
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start !important;
+    .logo-icon {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+    }
+
+    .navbar-li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 
   .nav-elements {
@@ -113,7 +127,6 @@
       padding: 16px 16px 16px 16px !important;
       position: relative;
       color: v.$primary-black;
-      display: block;
       border-bottom: solid 1px v.$color-dark;
       width: 100% !important;
       box-sizing: border-box !important;
@@ -125,34 +138,39 @@
       .dark & {
         background-color: v.$primary-black;
         color: #fff;
-
-        .navbar-li a,
-        .toggle-switch a {
+        li,
+        a,
+        p,
+        span {
           color: #fff;
+        }
 
-          .icon {
-            display: inline-block;
-            margin-right: 8px;
-          }
+        .icon {
+          display: inline-block;
+          margin-right: 8px;
         }
       }
+    }
 
-      .icon {
-        display: inline-block;
-        margin-right: 8px;
-      }
+    .icon {
+      display: inline-block;
+      margin-right: 8px;
+    }
 
-      .dark .text {
-        color: #fff;
-      }
+    .dark .text {
+      color: #fff;
+    }
+
+    .hide {
+      display: none;
     }
   }
+}
 
-  .menu-icon {
-    display: block;
-  }
+.menu-icon {
+  display: block;
+}
 
-  .nav-elements.active {
-    display: none;
-  }
+.nav-elements.active {
+  display: none;
 }
