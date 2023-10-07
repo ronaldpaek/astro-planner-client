@@ -2,8 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DarkModeToggle from './DarkModeToggle';
-import airplaneLogo from '@/assets/logo icon.svg';
-import notificationIcon from '@/assets/notification.svg';
 import userProfilePhoto from '@/assets/userPhoto.png';
 import { AiOutlineMenu } from 'react-icons/ai';
 import {
@@ -22,6 +20,7 @@ const Navigation = () => {
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
+    console.log('itworks');
   };
   return (
     <nav className="desktop-navigation">
@@ -34,7 +33,7 @@ const Navigation = () => {
                   className="logo-icon"
                   src={logoIcon}
                   size={24}
-                  alt="airplane-logo"
+                  alt="Astroplaner Logo"
                 />
               </li>
               <li style={{ fontWeight: 'bold' }} className="logo-type hide ">
@@ -43,11 +42,15 @@ const Navigation = () => {
             </Link>
           </div>
 
-          <div className="navbar-list-fullwidth">
+          <div
+            className={`navbar-list-fullwidth ${
+              showNavbar ? 'active' : 'hide'
+            }`}
+          >
             <li className="navbar-li">
               <Link className="flex" to={'/'}>
                 <FaHome className="icon" />
-                <span className="text home">Home</span>
+                <span className="text ">Home</span>
               </Link>
             </li>
             <li className="navbar-li">
@@ -69,7 +72,11 @@ const Navigation = () => {
               </Link>
             </li>
           </div>
-          <div className="navbar-list-fullwidth">
+          <div
+            className={`navbar-list-fullwidth ${
+              showNavbar ? 'active' : 'hide'
+            }`}
+          >
             <li className="navbar-li">
               <Link className="flex" to={'/usd'}>
                 <FaDollarSign className="icon" />
@@ -90,21 +97,14 @@ const Navigation = () => {
             <li className="navbar-li">
               <img src={userProfilePhoto} alt="user profile photo" />
             </li>
-            <div className="flex">
-              <DarkModeToggle />
-              <AiOutlineMenu
-                className="menu-icon"
-                size={30}
-                onClick={handleShowNavbar}
-              />
-            </div>
-            <div className="flex">
-              <AiOutlineMenu
-                className="menu-icon"
-                size={30}
-                onClick={handleShowNavbar}
-              />
-            </div>
+          </div>
+          <div className="flex">
+            <DarkModeToggle />
+            <AiOutlineMenu
+              className="menu-icon"
+              size={30}
+              onClick={handleShowNavbar}
+            />
           </div>
         </ul>
       </div>

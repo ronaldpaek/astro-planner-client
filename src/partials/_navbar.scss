@@ -84,14 +84,29 @@
     }
   }
 
+  toggle-switch {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+    top: 1.25em;
+    right: 4em;
+  }
   .navbar-list-fullwidth {
     flex-direction: column;
     width: 100%;
     align-items: flex-start !important;
+    padding: 10px;
     .logo-icon {
       height: 30px;
       width: 30px;
       margin-left: 10px;
+      position: fixed;
+      z-index: 1;
+      cursor: pointer;
+      top: 1.25em;
+      left: 2em;
     }
 
     .navbar-li {
@@ -141,7 +156,8 @@
         li,
         a,
         p,
-        span {
+        span,
+        footer {
           color: #fff;
         }
 
@@ -172,5 +188,5 @@
 }
 
 .nav-elements.active {
-  display: none;
+  display: block;
 }
