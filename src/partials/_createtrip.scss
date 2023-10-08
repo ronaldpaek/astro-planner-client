@@ -1,0 +1,12 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+.create-trip-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-one,
+.col-two {
+  width: 50%;
+}
