@@ -1,18 +1,33 @@
 @use './variables' as v;
 @use './mixins' as m;
 
+.nav-text {
+  color: v.$primary-black;
+  &:hover {
+    color: v.$hover-color;
+    text-decoration: none;
+    // transform: scale(1.1);
+    transition:
+      color 0.3s,
+      transform 0.3s ease-in-out;
+  }
+}
+
+.navbar-container {
+  padding: 30px 60px;
+}
+
 .navbar-list-fullwidth {
   display: flex;
   gap: 20px;
   align-items: center;
+  .text {
+    color: v.$color-dark !important;
+  }
 }
 
 .icon {
   display: none;
-}
-
-.text {
-  color: v.$color-dark;
 }
 
 .navbar-list {

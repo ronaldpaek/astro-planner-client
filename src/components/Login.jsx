@@ -56,7 +56,10 @@ const Login = () => {
             <label htmlFor="checkbox flex">
               <input type="checkbox" />
               Remember me
-              <span style={{ fontSize: '14px' }} className="forgot-password">
+              <span
+                style={{ fontSize: '14px' }}
+                className="forgot-password text"
+              >
                 Forgot Password?
               </span>
             </label>

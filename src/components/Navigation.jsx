@@ -24,7 +24,7 @@ const Navigation = () => {
   };
   return (
     <nav className="desktop-navigation">
-      <div className="container">
+      <div className="navbar-container">
         <ul className="navbar-list">
           <div className="navbar-list-fullwidth">
             <Link to="/" className="flex">
@@ -50,25 +50,25 @@ const Navigation = () => {
             <li className="navbar-li">
               <Link className="flex" to={'/'}>
                 <FaHome className="icon" />
-                <span className="text ">Home</span>
+                <span className="nav-text ">Home</span>
               </Link>
             </li>
             <li className="navbar-li">
               <Link className="flex" to={'/things-to-do'}>
                 <FaBriefcase className="icon" />
-                <span className="text">To Do</span>
+                <span className="nav-text">To Do</span>
               </Link>
             </li>
             <li className="navbar-li">
               <Link className="flex" to={'/tour'}>
                 <FaPlane className="icon" />
-                <span className="text">Tour</span>
+                <span className="nav-text">Tour</span>
               </Link>
             </li>
             <li className="navbar-li">
               <Link className="flex" to={'/blog'}>
                 <FaBlog className="icon" />
-                <span className="text">Blog</span>
+                <span className="nav-text">Blog</span>
               </Link>
             </li>
           </div>
@@ -80,13 +80,13 @@ const Navigation = () => {
             <li className="navbar-li">
               <Link className="flex" to={'/usd'}>
                 <FaDollarSign className="icon" />
-                <span className="text">USD</span>
+                <span className="nav-text">USD</span>
               </Link>
             </li>
             <li className="navbar-li">
               <Link className="flex" to={'/faqs'}>
                 <FaQuestion className="icon" />
-                <span className="text">FAQ</span>
+                <span className="nav-text">FAQ</span>
               </Link>
             </li>
             <li className="navbar-li">

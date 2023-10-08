@@ -30,7 +30,7 @@ p {
 }
 
 li,
-span {
+.text {
   margin-top: 0;
   @include m.regular;
   font-size: f.rem(v.$font-size-li); // Convert to rems
@@ -39,7 +39,7 @@ span {
 a,
 a:visited,
 a:active,
-span {
+.text {
   @include m.regular;
   font-size: f.rem(v.$font-size-p);
   color: v.$color-dark;
@@ -94,6 +94,13 @@ button:focus {
   align-items: center;
   padding-left: 0;
 }
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .flex-end {
   display: flex;
   justify-content: flex-end;
