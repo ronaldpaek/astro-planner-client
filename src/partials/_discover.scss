@@ -1,0 +1,87 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+
+.discoverContainer{
+    max-width: 1110px; 
+    margin: 0 auto; 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 135px;
+    gap:10px;
+ 
+}
+
+
+.rows{
+    max-width: 1110px;
+    gap:317px;
+}
+
+.card-layout{
+    align-items: flex-start;
+    width: 465px;  
+    max-width: 1110px; /* Add a max-width constraint */
+    margin: 0 auto; /* Center the element horizontally */
+    height: 100%;  
+}
+
+.features-layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.n-icon, .h-icon, .r-icon, .f-icon{
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+}
+
+.n-icon{
+    background-color: v.$secondary-yellow;;
+}
+
+.h-icon{
+    background-color: v.$success-color;
+}
+
+.r-icon{
+    background-color: v.$error-color;
+}
+
+.f-icon{
+    background-color: v.$primary-blue;
+}
+
+.text-box{
+    line-height: 32px;
+}
+
+
+@include m.breakpoint('small') {
+    .rows{
+       flex-direction: column;
+       align-items: center;
+       gap: 0px;
+    }
+
+    .card-layout{
+        width: 80%;
+    }
+
+    .discoverContainer{
+        display: block;
+    }
+
+}
+
+@include m.breakpoint('medium'){
+    .rows{
+        gap: 0px;
+    }
+
+}
+
+

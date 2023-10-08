@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default function TripPlanning() {
   return (
     <div className="trip-container">
-      <div className="trip-planning">
+      <div className="trip-planning flex-col">
         <h1 className="text">Innovative Trip Planning</h1>
         <p className="text">
           Our vision is to revolutionaize the way people travel by <br />{' '}
@@ -16,9 +16,9 @@ export default function TripPlanning() {
         </p>
       </div>
       <div className="card-container">
-        <div className="cardOne">
+        <div className="cardOne flex-col">
           <div className="lightIcon">
-            <img src={lightIcon} alt="light icon" />{' '}
+            <img src={lightIcon} alt="light icon" />
           </div>
           <div className="wrapper">
             <p className="text">
@@ -32,7 +32,7 @@ export default function TripPlanning() {
             </div>
           </Link>
         </div>
-        <div className="cardTwo">
+        <div className="cardTwo flex-col">
           <div className="websiteIcon">
             <img src={websiteIcon} alt="website icon" />
           </div>
@@ -49,7 +49,7 @@ export default function TripPlanning() {
             </div>
           </Link>
         </div>
-        <div className="cardThree">
+        <div className="cardThree flex-col">
           <div className="eBookIcon">
             <img src={eBookIcon} alt="website icon" />
           </div>

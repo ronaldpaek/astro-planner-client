@@ -1,22 +1,40 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-.trip-container {
-  margin: 50px;
+
+.trip-container{
+    margin: 50px;
+    max-width: 1110px; /* Add a max-width constraint */
+    margin: 0 auto; /* Center the element horizontally */
+   padding: 70px;
 }
 
-.trip-planning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-}
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  align-items: stretch;
-}
+.trip-planning{
+    margin-bottom: v.$spacing-medium;
+  }
+  .card-container{
+    display: flex;
+    justify-content: center;
+    gap:v.$spacing-medium;
+    align-items: stretch;
+  }
+
+
+  .cardOne, .cardTwo, .cardThree{
+    border-radius: 20px 20px;
+    text-align: center;
+    width: 272px;
+    padding: 20px;
+  }
+  .cardOne{
+    background-color: v.$secondary-green;
+  }
+  .cardTwo{
+    background-color: #FFF4EE;
+  }
+  .cardThree{
+    background-color: #EBF1FF;
+  }
 
 .cardOne,
 .cardTwo,
