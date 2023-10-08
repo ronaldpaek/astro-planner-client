@@ -69,7 +69,8 @@ img {
 
 button:hover,
 button:focus {
-  background-color: v.$hover-color;
+  background-color: v.$color-gray-5;
+  color: v.$color-gray-1;
 }
 
 .wrapper {

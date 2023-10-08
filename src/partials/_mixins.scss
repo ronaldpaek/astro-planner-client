@@ -28,12 +28,9 @@
   background-color: v.$color-light;
   border-radius: 10px;
   border: 1px solid #e6e8ec;
-  &:hover {
-    background-color: v.$color-light;
-  }
 }
 
-@mixin signin-button {
+@mixin form-button {
   background-color: v.$primary-blue;
   color: v.$color-light;
   padding: 12px 30px;
