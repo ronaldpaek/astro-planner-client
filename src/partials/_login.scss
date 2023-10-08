@@ -26,11 +26,10 @@
   max-width: 500px;
   padding: 48px 10px;
 }
-span {
-  color: v.$primary-blue;
-}
-.signin-button {
-  @include m.signin-button;
+
+.signin-button,
+.register-button {
+  @include m.form-button;
 }
 
 label {

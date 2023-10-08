@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from '@/App.jsx';
+import Home from './routes/Home';
 import Login from './components/Login';
+import Register from './components/Register';
 import CreateTrip from './components/CreateTrip';
 
 // Create a router configuration
@@ -10,14 +12,12 @@ const router = createBrowserRouter([
   {
     path: '/',
     // loader: () => fetchPaintings(),
-    element: (
-      <>
-        <App />
-      </>
-    ),
+    element: <App />,
     id: 'App',
     children: [
+      { path: '/', element: <Home /> },
       { path: '/login', element: <Login /> },
+      { path: '/register', element: <Register /> },
       { path: '/create-trip', element: <CreateTrip /> },
     ],
   },

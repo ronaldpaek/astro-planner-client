@@ -5,14 +5,6 @@
   color: v.$color-gray-3;
   width: 24px;
   height: 24px;
-  &:hover,
-  &:focus {
-    color: v.$color-gray-2;
-    transform: scale(1.1);
-    transition:
-      color 0.3s,
-      transform 0.3s ease-in-out;
-  }
 }
 
 .footer {
@@ -97,7 +89,7 @@
 }
 
 .social-link:hover {
-  color: #fff;
+  color: v.$hover-color;
 }
 
 .footer-links {
@@ -149,7 +141,7 @@
 }
 
 .link:hover {
-  color: #fff;
+  color: v.$hover-color;
 }
 
 .footer-bottom {

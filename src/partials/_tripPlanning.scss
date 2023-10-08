@@ -37,38 +37,60 @@
     background-color: #EBF1FF;
   }
 
-.lightIcon, .websiteIcon, .eBookIcon {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    text-align: center;
+.cardOne,
+.cardTwo,
+.cardThree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px;
+  text-align: center;
+  width: 272px;
+  padding: 20px;
+}
+.cardOne {
+  background-color: v.$secondary-green;
+}
+.cardTwo {
+  background-color: #fff4ee;
+}
+.cardThree {
+  background-color: #ebf1ff;
+}
 
+.lightIcon,
+.websiteIcon,
+.eBookIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
 }
 
 .lightIcon {
-    background-color: v.$success-color;
+  background-color: v.$success-color;
 }
 
-.websiteIcon{
-    background-color: v.$secondary-orange;
+.websiteIcon {
+  background-color: v.$secondary-orange;
 }
 
-.eBookIcon{
-    background-color: v.$primary-blue;
+.eBookIcon {
+  background-color: v.$primary-blue;
 }
 
-.learnMore{
-    display: flex;
-    align-items: center;
-    gap: 10px
-    
+.learnMore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-#learnMoreText{
-    margin: 0;
+#learnMoreText {
+  margin: 0;
 }
 
 .context{
@@ -82,15 +104,14 @@
         flex-direction: column;
         align-items: center;
 
-
-        .cardOne{
-            width:80%;
-        }
-        .cardTwo{
-            width:80%;
-        }
-        .cardThree{
-            width:80%;
-        }
+    .cardOne {
+      width: 80%;
     }
+    .cardTwo {
+      width: 80%;
+    }
+    .cardThree {
+      width: 80%;
+    }
+  }
 }
