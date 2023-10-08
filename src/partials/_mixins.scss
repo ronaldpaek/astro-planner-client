@@ -39,19 +39,9 @@
   border: none;
   border-radius: 10px;
   justify-content: center;
-}
-
-@mixin create-trip-button {
-  background-color: v.$primary-blue;
-  color: v.$color-light;
-  padding: 12px 20px;
-  display: flex;
-  align-self: stretch;
-  border: none;
-  border-radius: 10px;
-  justify-content: center;
   align-items: center;
 }
+
 // Mixin to handle breakpoints
 @mixin breakpoint($breakpoint) {
   @if $breakpoint == 'small' {
