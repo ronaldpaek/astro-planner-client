@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Outlet } from 'react-router-dom';
 import TripPlanning from './components/TripPlanning';
+import DiscoverFeatures from './components/DiscoverFeatures';
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -22,6 +23,7 @@ function App() {
         )}
       </div>
       <TripPlanning />
+      <DiscoverFeatures />
       <Outlet />
       <Footer />
     </>
