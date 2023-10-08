@@ -5,14 +5,11 @@ import {
   BiLogoTwitter,
 } from 'react-icons/bi';
 
-const Login = () => {
+const Register = () => {
   return (
     <div className="form-wrapper">
       <div className="signup-container flex-col">
         <h2>Get started</h2>
-        <p className="text-gray">
-          Don't have an account? <span className="signup-link">Sign up</span>
-        </p>
         <div className="flex">
           <ul className="social-icons flex">
             <li>
@@ -32,8 +29,22 @@ const Login = () => {
             </li>
           </ul>
         </div>
-        <p>or login with email</p>
-        <form className="login-form flex-col">
+        <p>or register with email</p>
+        <form className="register-form flex-col">
+          <label htmlFor="firstName">First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="Enter Your First Name"
+          />
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Enter Your Last Name"
+          />
           <label htmlFor="email">Email</label>
           <input
             type="text"
@@ -55,10 +66,10 @@ const Login = () => {
             </label>
             <span className="forgot-password">Forgot Password?</span>
           </div>
-          <button className="signin-button">sign in</button>
+          <button className="register-button">Register</button>
         </form>
       </div>
     </div>
   );
 };
-export default Login;
+export default Register;

@@ -29,8 +29,9 @@
 span {
   color: v.$primary-blue;
 }
-.signin-button {
-  @include m.signin-button;
+.signin-button,
+.register-button {
+  @include m.form-button;
 }
 
 label {
