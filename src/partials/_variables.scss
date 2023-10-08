@@ -4,10 +4,12 @@ $primary-black: #141416;
 $secondary-orange: #fa8f54;
 $secondary-yellow: #ffd166;
 $secondary-aqua: #7ed4cf;
-$secondary-green: #EEF9F2;
+$secondary-green: #eef9f2;
 $success-color: #58c27d;
 $error-color: #ff6370;
 
+//hover color
+$hover-color: lighten($primary-blue, 10%);
 // Spacing
 $spacing-small: 30px;
 $spacing-medium: 50px;

@@ -7,6 +7,7 @@ const CreateTrip = () => {
       <div className="form-wrapper">
         <div className="grid">
           <form className="create-trip-form ">
+            {/* <div className="form-container"> */}
             <div className="col-one">
               <h2>CreateTrip</h2>
               <label htmlFor="location">Location</label>
@@ -36,13 +37,14 @@ const CreateTrip = () => {
                 Travellers
               </label>
               <input
-                type="number"
+                type="text"
                 name="travellers"
                 id="travellers"
                 placeholder="Passenger"
               ></input>
               <button className="create-trip-button">Create Trip</button>
             </div>
+            {/* </div> */}
             <div className="col-two">
               <img src={tripImage} alt="Trip Image" className="trip-image" />
             </div>

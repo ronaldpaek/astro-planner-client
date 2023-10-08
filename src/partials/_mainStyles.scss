@@ -38,14 +38,20 @@ span {
 
 a,
 a:visited,
-a:active {
+a:active,
+span {
   @include m.regular;
   font-size: f.rem(v.$font-size-p);
   color: v.$color-dark;
   text-decoration: none;
-  &:hover {
-    color: v.$color-dark;
+  &:hover,
+  &:focus {
+    color: v.$hover-color;
     text-decoration: none;
+    // transform: scale(1.1);
+    transition:
+      color 0.3s,
+      transform 0.3s ease-in-out;
   }
 }
 
@@ -59,6 +65,11 @@ body {
 
 img {
   object-fit: cover;
+}
+
+button:hover,
+button:focus {
+  background-color: v.$hover-color;
 }
 
 .wrapper {
