@@ -4,6 +4,7 @@ import {
   BiLogoGooglePlusCircle,
   BiLogoTwitter,
 } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -11,7 +12,10 @@ const Login = () => {
       <div className="signup-container flex-col">
         <h2>Get started</h2>
         <p className="text-gray">
-          Don't have an account? <span className="signup-link">Sign up</span>
+          Don't have an account?{' '}
+          <Link to="/register" className="signup-link">
+            Sign up
+          </Link>
         </p>
         <div className="flex">
           <ul className="social-icons flex">
