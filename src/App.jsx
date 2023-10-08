@@ -2,7 +2,7 @@ import './App.scss';
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import TwoWeekTripPlan from '@/components/TwoWeekTripPlan';
+
 import { Outlet } from 'react-router-dom';
 import TripPlanning from './components/TripPlanning';
 import DiscoverFeatures from './components/DiscoverFeatures';
@@ -24,9 +24,7 @@ function App() {
         )}
       </div>
 
-      <TripPlanning />
 
-      <TwoWeekTripPlan />
 
       <Outlet />
       <Footer />
