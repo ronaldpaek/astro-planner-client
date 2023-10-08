@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import TwoWeekTripPlan from '@/components/TwoWeekTripPlan';
 import { Outlet } from 'react-router-dom';
+import TripPlanning from './components/TripPlanning';
 
 
 function App() {
@@ -22,7 +23,11 @@ function App() {
           <Navigation handleShowNavbar={handleShowNavbar} />
         )}
       </div>
+
+      <TripPlanning />
+
       <TwoWeekTripPlan />
+
       <Outlet />
       <Footer />
     </>

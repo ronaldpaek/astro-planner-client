@@ -1,0 +1,100 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+
+    .trip-container{
+        margin: 50px;
+    }
+
+.trip-planning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+  }
+  .card-container{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    align-items: stretch;
+  }
+
+
+  .cardOne, .cardTwo, .cardThree{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border-radius: 20px 20px;
+    text-align: center;
+    width: 272px;
+    padding: 20px;
+  }
+  .cardOne{
+    background-color: v.$secondary-green;
+  }
+  .cardTwo{
+    background-color: #FFF4EE;
+  }
+  .cardThree{
+    background-color: #EBF1FF;
+  }
+
+.lightIcon, .websiteIcon, .eBookIcon {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+
+}
+
+.lightIcon {
+    background-color: v.$success-color;
+}
+
+.websiteIcon{
+    background-color: v.$secondary-orange;
+}
+
+.eBookIcon{
+    background-color: v.$primary-blue;
+}
+
+.learnMore{
+    display: flex;
+    align-items: center;
+    gap: 10px
+    
+}
+
+#learnMoreText{
+    margin: 0;
+}
+
+.text{
+    text-align: center;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+@include m.breakpoint('small') {
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+
+
+        .cardOne{
+            width:80%;
+        }
+        .cardTwo{
+            width:80%;
+        }
+        .cardThree{
+            width:80%;
+        }
+    }
+}
