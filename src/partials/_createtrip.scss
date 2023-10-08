@@ -3,10 +3,33 @@
 
 .create-trip-form {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  box-shadow: v.$box-shadow-small;
 }
 
-.col-one,
-.col-two {
-  width: 50%;
+.col-one {
+  display: flex;
+  flex-direction: column;
+  margin-right: 112px;
+  padding: 48px 30px;
+}
+
+.create-trip-button {
+  @include m.create-trip-button;
+  width: 100%;
+  height: 48px;
+}
+
+@include m.breakpoint('small') {
+  .form-wrapper {
+    padding: v.$spacing-small;
+  }
+  .create-trip-form {
+    flex-direction: column;
+    align-items: center;
+
+    .col-one {
+      margin-right: 0;
+    }
+  }
 }
