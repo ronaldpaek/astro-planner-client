@@ -9,7 +9,7 @@ export default function TripPlanning() {
   return (
     <div className="trip-container">
       <div className="trip-planning flex-col">
-        <h1 className=" context text">Innovative Trip Planning</h1>
+        <h1>Innovative Trip Planning</h1>
         <p className="context text">
           Our vision is to revolutionaize the way people travel by <br />{' '}
           introducing intelligent trip planning
