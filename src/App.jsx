@@ -25,7 +25,7 @@ function App() {
       </div>
 
       <TripPlanning />
-
+      <DiscoverFeatures />
       <TwoWeekTripPlan />
 
       <Outlet />

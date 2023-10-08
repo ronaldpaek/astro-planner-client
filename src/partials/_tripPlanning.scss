@@ -12,7 +12,8 @@
 .trip-planning{
     margin-bottom: v.$spacing-medium;
   }
-  .card-container{
+  
+  .card-wrapper{
     display: flex;
     justify-content: center;
     gap:v.$spacing-medium;
@@ -70,14 +71,14 @@
     margin: 0;
 }
 
-.text{
+.context{
     text-align: center;
     line-height: 1.5;
     word-wrap: break-word;
 }
 
 @include m.breakpoint('small') {
-    .card-container{
+    .card-wrapper{
         flex-direction: column;
         align-items: center;
 
