@@ -55,23 +55,6 @@
   right: 4em;
 }
 
-.dark {
-  background-color: v.$primary-black;
-  color: #fff;
-
-  .navbar-li a,
-  .toggle-switch a,
-  .text,
-  .logo-type {
-    color: #fff !important;
-
-    .icon {
-      display: none;
-      margin-right: 8px;
-    }
-  }
-}
-
 @include m.breakpoint('small') {
   .navbar-list {
     margin: 0;
@@ -148,23 +131,6 @@
 
       .desktop-navigation .navbar-li {
         border-bottom: none;
-      }
-
-      .dark & {
-        background-color: v.$primary-black;
-        color: #fff;
-        li,
-        a,
-        p,
-        span,
-        footer {
-          color: #fff;
-        }
-
-        .icon {
-          display: inline-block;
-          margin-right: 8px;
-        }
       }
     }
 
