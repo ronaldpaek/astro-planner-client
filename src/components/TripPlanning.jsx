@@ -21,10 +21,9 @@ export default function InnovativeTripPlanning() {
             <img src={LightIcon} alt="Light Icon" />
           </div>
           <div className="trip-card-content flex-col">
-            <p className="card-description">
-              Partner allows you to browse multiple carriers for travel.
-            </p>
+            <p>Partner allows you to browse multiple carriers for travel.</p>
           </div>
+          hi
           <Link to="/">
             <div className="learn-more">
               <p className="learn-more-text">Learn more</p>

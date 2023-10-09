@@ -2,7 +2,7 @@
 @use './mixins' as m;
 
 .main-container {
-  background: #EAF0FF;
+  background: #eaf0ff;
   padding: 71px 135px;
 }
 
@@ -64,32 +64,36 @@
 }
 
 @include m.breakpoint('small') {
+  .main-container {
+    padding: unset;
+  }
+
+  .flex {
+    display: unset;
+  }
   .left-and-right {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    padding: unset;
+    .heading-container {
+      width: unset;
+    }
   }
 
   .card-content {
     gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    height: unset;
+    .indiviual-card {
+      width: unset;
+      width: 70%;
+      height: 200px;
+    }
   }
 
   .frameImg {
     padding-top: 50px;
   }
 }
-
-@include m.breakpoint('medium') {
-  .left-side {
-    gap: 10px;
-  }
-
-  .card-content {
-    gap: 10px;
-  }
-
-  .left-and-right {
-    gap: 0px;
-    flex-shrink: 0;
-    padding-left: 20px; /* Adjusted for better spacing */
-  }
-}
+  
