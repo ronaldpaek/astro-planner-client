@@ -1,4 +1,7 @@
 import React from 'react';
+import { useOutletContext, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import {
   BiLogoFacebookCircle,
   BiLogoGooglePlusCircle,
@@ -6,6 +9,38 @@ import {
 } from 'react-icons/bi';
 
 const Register = () => {
+  const queryClient = useQueryClient();
+  const { setUser } = useOutletContext();
+  const navigate = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: (newUser) => {
+      console.log('newUser', newUser);
+      console.log('vite', import.meta.env.VITE_BASE_API_URL);
+      return axios.post(
+        `${import.meta.env.VITE_BASE_API_URL}/users/signup`,
+        newUser
+      );
+    },
+    onSuccess: (res) => {
+      console.log('res', res);
+      console.log('res', res.data);
+      setUser(res.data.user);
+      queryClient.invalidateQueries({ queryKey: ['user'] });
+      navigate('/');
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    console.log('formData', formData);
+    const formJson = Object.fromEntries(formData);
+    console.log('formJson', formJson);
+    mutation.mutate(formJson);
+  };
+
   return (
     <div className="form-wrapper">
       <div className="signup-container flex-col">
@@ -30,7 +65,7 @@ const Register = () => {
           </ul>
         </div>
         <p>or register with email</p>
-        <form className="register-form flex-col">
+        <form className="register-form flex-col" onSubmit={handleSubmit}>
           <label htmlFor="firstName">First Name</label>
           <input
             type="text"
@@ -68,7 +103,9 @@ const Register = () => {
               </span>
             </label>
           </div>
-          <button className="register-button">Register</button>
+          <button type="submit" className="register-button">
+            Register
+          </button>
         </form>
       </div>
     </div>
