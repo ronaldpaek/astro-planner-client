@@ -10,9 +10,9 @@ export default function EasyTripBooking() {
       <div className="left-and-right">
         <div className="left-content">
           <div className="heading-container flex-col">
-            <h1>Easy Trip Booking Website</h1>
+            <h2>Easy Trip Booking Website</h2>
             <div className="flex-col">
-              <p>
+              <p className="easy-trip-text">
                 A new way to book travel online, saving you time. With trip,
                 there are no confusing spreadsheets or complicated searches. We
                 just ask the right questions, find the best deal for you, then

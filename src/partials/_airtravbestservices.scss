@@ -36,3 +36,15 @@
   max-height: 200px;
   border-radius: 12px;
 }
+
+@include m.breakpoint('small') {
+  .airtrav-best-services-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .service-card {
+    min-width: 270px;
+    min-height: 200px;
+  }
+}
