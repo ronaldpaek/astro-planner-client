@@ -15,7 +15,7 @@ export default function DiscoverFeatures() {
               <div className=" flex n-icon">
                 <img src={navigateIcon} alt="navigate to" />
               </div>
-              <h2 className="text">Share Your Travel Plan</h2>
+              <h2 className="discover-text">Share Your Travel Plan</h2>
             </div>
             <p className="text-box">
               Ticket is an ultra-convenient way to buy your train or bus ticket
@@ -28,7 +28,7 @@ export default function DiscoverFeatures() {
               <div className=" flex h-icon">
                 <img src={hierarchyIcon} alt="hierarchy" />
               </div>
-              <h2 className="text">Get Monthly Tour</h2>
+              <h2 className="discover-text">Get Monthly Tour</h2>
             </div>
             <p className="text-box">
               Our Get Monthly Tours marketing package will help get more clients
@@ -42,7 +42,7 @@ export default function DiscoverFeatures() {
               <div className=" flex r-icon">
                 <img src={recieveIcon} alt="recieve ticket icon" />
               </div>
-              <h2 className="text">Recieve Ticket</h2>
+              <h2 className="discover-text">Recieve Ticket</h2>
             </div>
             <p className="text-box">
               The recieve plan Ticket will allow you to travel freely. You will
@@ -54,7 +54,7 @@ export default function DiscoverFeatures() {
               <div className="f-icon flex">
                 <img src={flightIcon} alt="flight icon" />
               </div>
-              <h2 className="text">Flight Booking</h2>
+              <h2 className="discover-text">Flight Booking</h2>
             </div>
             <p className="text-box">
               Flight Booking is an ultra-convenient way to buy your train or bus
