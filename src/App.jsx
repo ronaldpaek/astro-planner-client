@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import './App.scss';
+import '@/App.scss';
 import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Login from '@/components/Login';
