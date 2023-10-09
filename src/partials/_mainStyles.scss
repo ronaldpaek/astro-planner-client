@@ -74,6 +74,19 @@ button:focus {
   color: v.$color-gray-1;
 }
 
+.blue {
+  background-color: v.$primary-blue;
+}
+.green {
+  background-color: v.$success-color;
+}
+.orange {
+  background-color: v.$secondary-orange;
+}
+.yellow {
+  background-color: v.$secondary-yellow;
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
