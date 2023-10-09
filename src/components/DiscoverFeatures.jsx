@@ -6,11 +6,11 @@ import flightIcon from '@/assets/flightIcon.svg';
 export default function DiscoverFeatures() {
   return (
     <div className="discoverContainer">
-      <h1 className="features-text">Discover our Features</h1>
+      <h2 className="features-text">Discover our Features</h2>
       <div className="features-layout">
         <div className="flex rows">
           <div className="flex-col card-layout">
-            <div className=" flex">
+            <div className="card-layout-container flex">
               <div className=" flex n-icon">
                 <img src={navigateIcon} alt="navigate to" />
               </div>
@@ -22,8 +22,8 @@ export default function DiscoverFeatures() {
             </p>
           </div>
 
-          <div className="flex-col card-layout">
-            <div className="flex">
+          <div className=" card-layout flex-col">
+            <div className="card-layout-container flex">
               <div className=" flex h-icon">
                 <img src={hierarchyIcon} alt="hierarchy" />
               </div>
@@ -31,14 +31,13 @@ export default function DiscoverFeatures() {
             </div>
             <p className="text-box">
               Our Get Monthly Tours marketing package will help get more clients
-              in your photography business.
             </p>
           </div>
         </div>
         <div className="flex rows">
           <div className="card-layout flex-col">
-            <div className="flex ">
-              <div className=" flex r-icon">
+            <div className="card-layout-container flex">
+              <div className="flex r-icon">
                 <img src={recieveIcon} alt="recieve ticket icon" />
               </div>
               <h2 className="discover-text">Recieve Ticket</h2>
@@ -49,7 +48,7 @@ export default function DiscoverFeatures() {
             </p>
           </div>
           <div className="card-layout flex-col">
-            <div className="flex">
+            <div className="card-layout-container flex">
               <div className="f-icon flex">
                 <img src={flightIcon} alt="flight icon" />
               </div>

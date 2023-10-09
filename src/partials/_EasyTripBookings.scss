@@ -69,12 +69,13 @@
   }
 
   .flex {
-    display: unset;
+    flex-direction: column;
   }
   .left-and-right {
     flex-direction: column-reverse;
     align-items: center;
     padding: unset;
+    gap: 0;
     .heading-container {
       width: unset;
     }
@@ -87,13 +88,15 @@
     height: unset;
     .indiviual-card {
       width: unset;
-      width: 70%;
-      height: 200px;
+      width: 270px;
+      min-height: 200px;
     }
   }
-
+  .easy-trip-text {
+    margin: 14px 24px;
+  }
   .frameImg {
     padding-top: 50px;
+    max-width: unset;
   }
 }
-  
