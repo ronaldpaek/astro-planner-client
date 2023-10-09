@@ -1,67 +1,50 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-
-.trip-container{
-    margin: 50px;
-    max-width: 1110px; /* Add a max-width constraint */
-    margin: 0 auto; /* Center the element horizontally */
-   padding: 70px;
+.trip-planning-container {
+  margin: 50px;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 70px;
+  text-align: center;
 }
 
-.trip-planning{
-    margin-bottom: v.$spacing-medium;
-  }
-  
-  .card-wrapper{
-    display: flex;
-    justify-content: center;
-    gap:v.$spacing-medium;
-    align-items: stretch;
-  }
+.trip-planning-content {
+  margin-bottom: v.$spacing-medium;
+}
 
-
-  .cardOne, .cardTwo, .cardThree{
-    border-radius: 20px 20px;
-    text-align: center;
-    width: 272px;
-    padding: 20px;
-  }
-  .cardOne{
-    background-color: v.$secondary-green;
-  }
-  .cardTwo{
-    background-color: #FFF4EE;
-  }
-  .cardThree{
-    background-color: #EBF1FF;
-  }
-
-.cardOne,
-.cardTwo,
-.cardThree {
+.trip-planning-card-container {
   display: flex;
+  justify-content: center;
+  gap: v.$spacing-medium;
+  align-items: stretch;
+}
+
+.trip-card {
+  display: flex;
+  padding: 21px 36px 21px 35px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px 20px;
-  text-align: center;
-  width: 272px;
-  padding: 20px;
+  gap: 10px;
+  max-width: 272px;
+  height: 250px;
 }
-.cardOne {
+
+.trip-card:nth-child(1) {
   background-color: v.$secondary-green;
 }
-.cardTwo {
+
+.trip-card:nth-child(2) {
   background-color: #fff4ee;
 }
-.cardThree {
+.trip-card:nth-child(3) {
   background-color: #ebf1ff;
 }
 
-.lightIcon,
-.websiteIcon,
-.eBookIcon {
+.light-icon,
+.website-icon,
+.ebook-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,46 +54,40 @@
   text-align: center;
 }
 
-.lightIcon {
+.light-icon {
   background-color: v.$success-color;
 }
 
-.websiteIcon {
+.website-icon {
   background-color: v.$secondary-orange;
 }
 
-.eBookIcon {
+.ebook-icon {
   background-color: v.$primary-blue;
 }
 
-.learnMore {
+.learn-more {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#learnMoreText {
+.learn-more-text {
   margin: 0;
 }
 
-.context{
-    text-align: center;
-    line-height: 1.5;
-    word-wrap: break-word;
+.card-description {
+  text-align: center;
+  line-height: 1.5;
+  word-wrap: break-word;
 }
 
 @include m.breakpoint('small') {
-    .card-wrapper{
-        flex-direction: column;
-        align-items: center;
+  .trip-planning-card-container {
+    flex-direction: column;
+    align-items: center;
 
-    .cardOne {
-      width: 80%;
-    }
-    .cardTwo {
-      width: 80%;
-    }
-    .cardThree {
+    .trip-card {
       width: 80%;
     }
   }
