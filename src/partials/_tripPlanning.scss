@@ -9,9 +9,11 @@
   text-align: center;
 }
 
+
 .trip-planning-content {
   margin-bottom: v.$spacing-medium;
 }
+
 
 .trip-planning-card-container {
   display: flex;
@@ -76,6 +78,8 @@
   margin: 0;
 }
 
+
+
 .card-description {
   text-align: center;
   line-height: 1.5;
@@ -86,6 +90,7 @@
   .trip-planning-card-container {
     flex-direction: column;
     align-items: center;
+
 
     .trip-card {
       width: 80%;

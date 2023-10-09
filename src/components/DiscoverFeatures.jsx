@@ -7,7 +7,7 @@ import flightIcon from '@/assets/flightIcon.svg';
 export default function DiscoverFeatures() {
   return (
     <div className="discoverContainer">
-      <h1 className="features-text text">Discover our Features</h1>
+      <h1 className="features-text">Discover our Features</h1>
       <div className="features-layout">
         <div className="flex rows">
           <div className="flex-col card-layout">
