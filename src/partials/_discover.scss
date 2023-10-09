@@ -10,9 +10,11 @@
     flex-direction: column;
     padding: 70px 135px;
     gap:10px;
- 
 }
 
+.features-text{
+    text-align: center;
+}
 
 .rows{
     max-width: 1110px;
@@ -71,17 +73,12 @@
         width: 80%;
     }
 
-    .discoverContainer{
-        display: block;
-    }
-
 }
 
 @include m.breakpoint('medium'){
     .rows{
         gap: 0px;
     }
-
 }
 
 
