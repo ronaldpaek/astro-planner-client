@@ -3,9 +3,43 @@ import {
   BiLogoGooglePlusCircle,
   BiLogoTwitter,
 } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { Link, useOutletContext, useNavigate } from 'react-router-dom';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 const Login = () => {
+  const queryClient = useQueryClient();
+  const { setUser } = useOutletContext();
+  const navigate = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: (formData) => {
+      console.log('formData', formData);
+      console.log('vite', import.meta.env.VITE_BASE_API_URL);
+      return axios.post(
+        `${import.meta.env.VITE_BASE_API_URL}/users/login`,
+        formData
+      );
+    },
+    onSuccess: (res) => {
+      console.log('res', res);
+      console.log('res', res.data);
+      setUser(res.data.user);
+      queryClient.invalidateQueries({ queryKey: ['user'] });
+      navigate('/');
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    console.log('formData', formData);
+    const formJson = Object.fromEntries(formData);
+    console.log('formJson', formJson);
+    mutation.mutate(formJson);
+  };
+
   return (
     <div className="form-wrapper">
       <div className="signup-container flex-col">
@@ -36,7 +70,7 @@ const Login = () => {
           </ul>
         </div>
         <p>or login with email</p>
-        <form className="login-form flex-col">
+        <form className="login-form flex-col" onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input
             type="text"
@@ -63,7 +97,9 @@ const Login = () => {
               </span>
             </label>
           </div>
-          <button className="signin-button">sign in</button>
+          <button className="signin-button" type="submit">
+            sign in
+          </button>
         </form>
       </div>
     </div>
