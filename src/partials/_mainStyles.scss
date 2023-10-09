@@ -27,6 +27,7 @@ p {
   margin-top: 0;
   @include m.regular;
   font-size: f.rem(v.$font-size-p); // Convert to rems
+  line-height: 32px;
 }
 
 li,
@@ -125,6 +126,9 @@ li {
   flex-direction: column;
 }
 
+.block {
+  display: block;
+}
 @include m.breakpoint('small') {
   .flex-col {
     flex-direction: column;
