@@ -1,9 +1,9 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+
 import LightIcon from '@/assets/lightIcon.svg';
 import WebsiteIcon from '@/assets/websiteIcon.svg';
 import EbookIcon from '@/assets/eBookIcon.svg';
 import RightArrowIcon from '@/assets/rightArrow.svg';
-import { Link } from 'react-router-dom';
 
 export default function InnovativeTripPlanning() {
   return (

@@ -1,30 +1,29 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import './App.scss';
-import React, { useState } from 'react';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { Outlet } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import Home from '@/pages/Home';
+import Login from '@/components/Login';
+import Register from '@/components/Register';
+import CreateTrip from '@/components/CreateTrip';
 
 function App() {
-  const [showNavbar, setShowNavbar] = useState(false);
+  // Create a router configuration
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      // loader: () => fetchPaintings(),
+      element: <Layout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'login', element: <Login /> },
+        { path: 'register', element: <Register /> },
+        { path: 'create-trip', element: <CreateTrip /> },
+      ],
+    },
+  ]);
 
-  const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar);
-  };
-
-  return (
-    <>
-      <div>
-        {window.innerWidth < 768 ? (
-          <Navigation handleShowNavbar={handleShowNavbar} />
-        ) : (
-          <Navigation handleShowNavbar={handleShowNavbar} />
-        )}
-      </div>
-
-      <Outlet />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

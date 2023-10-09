@@ -1,5 +1,4 @@
-import React from 'react';
-import tripImage from '@/assets/trip-image.png'; 
+import tripImage from '@/assets/trip-image.png';
 
 const CreateTrip = () => {
   return (

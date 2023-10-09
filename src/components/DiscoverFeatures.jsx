@@ -1,4 +1,3 @@
-import react from 'react';
 import navigateIcon from '@/assets/navigateIcon.svg';
 import hierarchyIcon from '@/assets/hierarchyIcon.svg';
 import recieveIcon from '@/assets/recieveIcon.svg';

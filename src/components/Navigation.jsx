@@ -1,8 +1,5 @@
-import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import DarkModeToggle from './DarkModeToggle';
-import userProfilePhoto from '@/assets/userPhoto.png';
 import { AiOutlineMenu } from 'react-icons/ai';
 import {
   FaHome,
@@ -13,7 +10,10 @@ import {
   FaQuestion,
   FaRegBell,
 } from 'react-icons/fa';
+
+import DarkModeToggle from '@/components/DarkModeToggle';
 import logoIcon from '@/assets/moon-logo-v2.svg';
+import userProfilePhoto from '@/assets/userPhoto.png';
 
 const Navigation = () => {
   const [showNavbar, setShowNavbar] = useState(false);

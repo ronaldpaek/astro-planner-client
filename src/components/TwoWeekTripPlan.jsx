@@ -7,7 +7,6 @@ import avatar1 from '@/assets/avatar1.png';
 import avatar2 from '@/assets/avatar2.png';
 import avatar3 from '@/assets/avatar3.png';
 import avatar4 from '@/assets/avatar4.png';
-// import illustration from '@/assets/illustration.svg';
 
 const cardItems = [
   {
@@ -54,15 +53,14 @@ const TwoWeekTripPlan = () => {
             <div>Trip Plan</div>
           </h2>
           <p className="trip-plan-description">
-            <div>
+            <span>
               The secret of good trip planning is to plan in advance, and we
-            </div>
-            <div>can't get much more advanced than 14 days.</div>
+            </span>
+            <span>can't get much more advanced than 14 days.</span>
           </p>
           <button className="trip-plan-button">Go Plan</button>
         </div>
         <div className="illustration-container">
-          {/* <img src={illustration} alt="illustration" className="illustration" /> */}
           <div className="card-container">
             {cardItems.map((item, index) => (
               <div key={index} className="card">

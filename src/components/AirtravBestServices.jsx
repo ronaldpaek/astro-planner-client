@@ -1,4 +1,3 @@
-import React from 'react';
 import Hotel from '@/assets/hotel.png';
 import Restaurant from '@/assets/restaurant.png';
 import Rout from '@/assets/rout.svg';
