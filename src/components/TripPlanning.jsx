@@ -1,67 +1,74 @@
 import React from 'react';
-import lightIcon from '@/assets/lightIcon.svg';
-import websiteIcon from '@/assets/websiteIcon.svg';
-import eBookIcon from '@/assets/eBookIcon.svg';
-import rightArrow from '@/assets/rightArrow.svg';
+import LightIcon from '@/assets/lightIcon.svg';
+import WebsiteIcon from '@/assets/websiteIcon.svg';
+import EbookIcon from '@/assets/eBookIcon.svg';
+import RightArrowIcon from '@/assets/rightArrow.svg';
 import { Link } from 'react-router-dom';
 
-export default function TripPlanning() {
+export default function InnovativeTripPlanning() {
   return (
-    <div className="trip-container">
-      <div className="trip-planning flex-col">
-        <h1>Innovative Trip Planning</h1>
-        <p className="context text">
-          Our vision is to revolutionaize the way people travel by <br />{' '}
-          introducing intelligent trip planning
+
+    <div className="trip-planning-container">
+      <div className="trip-planning-content">
+        <h2 className="trip-planning-title">Innovative Trip Planning</h2>
+        <p className="trip-planning-description">
+          Our vision is to revolutionize the way people travel by introducing
+          <span className="block">intelligent trip planning.</span>
         </p>
       </div>
-      <div className="card-wrapper ">
-        <div className="cardOne flex-col">
-          <div className="lightIcon">
-            <img src={lightIcon} alt="light icon" />
+      <div className="trip-planning-card-container flex">
+        <div className="trip-card">
+          <div className="light-icon">
+            <img src={LightIcon} alt="Light Icon" />
           </div>
-          <div className="wrapper">
-            <p className=" context text">
+          <div className="trip-card-content flex-col">
+
               Partner allows you to browse multiple carriers for travel.
             </p>
           </div>
           <Link to="/">
-            <div className="learnMore">
-              <p id="learnMoreText">Learn more</p>
-              <img src={rightArrow} alt="learn more" />
+            <div className="learn-more">
+              <p className="learn-more-text">Learn more</p>
+              <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
         </div>
-        <div className="cardTwo flex-col">
-          <div className="websiteIcon">
-            <img src={websiteIcon} alt="website icon" />
+        <div className="trip-card">
+          <div className="website-icon">
+            <img src={WebsiteIcon} alt="Website Icon" />
           </div>
-          <div className="wrapper">
-            <p className="context text">
+
+
+          <div className="card-content">
+            <p className="card-description">
+
               The website is a way for partners to communicate with their
               customers.
             </p>
           </div>
           <Link to="/">
-            <div className="learnMore">
-              <p id="learnMoreText">Learn more</p>
-              <img src={rightArrow} alt="learn more" />
+            <div className="learn-more">
+              <p className="learn-more-text">Learn more</p>
+              <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
         </div>
-        <div className="cardThree flex-col">
-          <div className="eBookIcon">
-            <img src={eBookIcon} alt="website icon" />
+        <div className="trip-card">
+          <div className="ebook-icon">
+            <img src={EbookIcon} alt="Ebook Icon" />
           </div>
-          <div className="wrapper">
-            <p className="context text">
-              The ebook Reader is a new way to look at e-books.
+
+
+          <div className="card-content">
+            <p className="card-description">
+              The Ebook Reader is a new way to look at e-books.
+
             </p>
           </div>
           <Link to="/">
-            <div className="learnMore">
-              <p id="learnMoreText">Learn more</p>
-              <img src={rightArrow} alt="learn more" />
+            <div className="learn-more">
+              <p className="learn-more-text">Learn more</p>
+              <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
         </div>
