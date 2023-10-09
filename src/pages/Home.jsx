@@ -16,7 +16,6 @@ const Home = () => {
       <AirtravBestServices />
       <DiscoverFeatures />
       <TwoWeekTripPlan />
-      <AirtravBestServices />
     </>
   );
 };
