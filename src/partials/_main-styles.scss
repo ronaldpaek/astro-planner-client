@@ -15,7 +15,8 @@ h2 {
 
 h3 {
   @include m.medium;
-  font-size: f.rem(v.$font-size-h3); // Convert to rems
+  font-size: f.rem(v.$font-size-h3);
+  margin: 0;
 }
 
 h4 {
@@ -28,6 +29,7 @@ p {
   @include m.regular;
   font-size: f.rem(v.$font-size-p); // Convert to rems
   line-height: 32px;
+  color: v.$color-gray-3;
 }
 
 li,
@@ -86,7 +88,10 @@ button:focus {
 .yellow {
   background-color: v.$secondary-yellow;
 }
-
+.light {
+  color: v.$color-light;
+  margin-bottom: v.$spacing-medium;
+}
 .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -103,7 +108,7 @@ button:focus {
 
 .flex {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   justify-content: center;
   align-items: center;
   padding-left: 0;

@@ -23,10 +23,9 @@ export default function InnovativeTripPlanning() {
           <div className="trip-card-content flex-col">
             <p>Partner allows you to browse multiple carriers for travel.</p>
           </div>
-          hi
           <Link to="/">
             <div className="learn-more">
-              <p className="learn-more-text">Learn more</p>
+              <p className="learn-more-text text">Learn more</p>
               <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
@@ -43,7 +42,7 @@ export default function InnovativeTripPlanning() {
           </div>
           <Link to="/">
             <div className="learn-more">
-              <p className="learn-more-text">Learn more</p>
+              <p className="learn-more-text text">Learn more</p>
               <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
@@ -59,7 +58,7 @@ export default function InnovativeTripPlanning() {
           </div>
           <Link to="/">
             <div className="learn-more">
-              <p className="learn-more-text">Learn more</p>
+              <p className="learn-more-text text">Learn more</p>
               <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
