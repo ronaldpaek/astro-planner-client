@@ -22,7 +22,8 @@ export default function InnovativeTripPlanning() {
           </div>
           <div className="trip-card-content flex-col">
             <p>Partner allows you to browse multiple carriers for travel.</p>
-          </div> hi
+          </div>
+          hi
           <Link to="/">
             <div className="learn-more">
               <p className="learn-more-text">Learn more</p>
@@ -34,7 +35,6 @@ export default function InnovativeTripPlanning() {
           <div className="website-icon">
             <img src={WebsiteIcon} alt="Website Icon" />
           </div>
-
           <div className="card-content">
             <p className="card-description">
               The website is a way for partners to communicate with their
@@ -52,7 +52,6 @@ export default function InnovativeTripPlanning() {
           <div className="ebook-icon">
             <img src={EbookIcon} alt="Ebook Icon" />
           </div>
-
           <div className="card-content">
             <p className="card-description">
               The Ebook Reader is a new way to look at e-books.
