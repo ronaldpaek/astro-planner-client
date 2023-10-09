@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 export default function InnovativeTripPlanning() {
   return (
-
     <div className="trip-planning-container">
       <div className="trip-planning-content">
         <h2 className="trip-planning-title">Innovative Trip Planning</h2>
@@ -22,10 +21,8 @@ export default function InnovativeTripPlanning() {
             <img src={LightIcon} alt="Light Icon" />
           </div>
           <div className="trip-card-content flex-col">
-
-              Partner allows you to browse multiple carriers for travel.
-            </p>
-          </div>
+            <p>Partner allows you to browse multiple carriers for travel.</p>
+          </div> hi
           <Link to="/">
             <div className="learn-more">
               <p className="learn-more-text">Learn more</p>
@@ -38,10 +35,8 @@ export default function InnovativeTripPlanning() {
             <img src={WebsiteIcon} alt="Website Icon" />
           </div>
 
-
           <div className="card-content">
             <p className="card-description">
-
               The website is a way for partners to communicate with their
               customers.
             </p>
@@ -58,11 +53,9 @@ export default function InnovativeTripPlanning() {
             <img src={EbookIcon} alt="Ebook Icon" />
           </div>
 
-
           <div className="card-content">
             <p className="card-description">
               The Ebook Reader is a new way to look at e-books.
-
             </p>
           </div>
           <Link to="/">
