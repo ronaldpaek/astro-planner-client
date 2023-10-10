@@ -34,3 +34,5 @@
 .save-button {
   @include m.save-button;
 }
+@include m.breakpoint('small') {
+}

@@ -5,8 +5,8 @@ import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Login from '@/components/Login';
 import Register from '@/components/Register';
-import CreateTrip from '@/components/CreateTrip';
-import HotelReservation from '@/components/HotelReservation';
+import CreateTrip from '@/pages/CreateTrip';
+import HotelReservation from '@/pages/HotelReservation';
 
 function App() {
   // Create a router configuration
