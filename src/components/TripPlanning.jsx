@@ -7,7 +7,7 @@ import RightArrowIcon from '@/assets/rightArrow.svg';
 
 export default function InnovativeTripPlanning() {
   return (
-    <div className="trip-planning-container">
+    <section className="trip-planning-container">
       <div className="trip-planning-content">
         <h2 className="trip-planning-title">Innovative Trip Planning</h2>
         <p className="trip-planning-description">
@@ -64,6 +64,6 @@ export default function InnovativeTripPlanning() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

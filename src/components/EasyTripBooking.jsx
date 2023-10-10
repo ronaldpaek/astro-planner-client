@@ -6,7 +6,7 @@ import frame from '@/assets/frame.png';
 
 export default function EasyTripBooking() {
   return (
-    <div className="main-container flex ">
+    <section className="easy-trip main-container flex ">
       <div className="left-and-right">
         <div className="left-content">
           <div className="heading-container flex-col">
@@ -58,6 +58,6 @@ export default function EasyTripBooking() {
         </div>
         <img className="frameImg" src={frame} alt="welcome-frame" />
       </div>
-    </div>
+    </section>
   );
 }

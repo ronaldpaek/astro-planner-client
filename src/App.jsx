@@ -6,6 +6,7 @@ import Home from '@/pages/Home';
 import Login from '@/components/Login';
 import Register from '@/components/Register';
 import CreateTrip from '@/components/CreateTrip';
+import HotelReservation from '@/components/HotelReservation';
 
 function App() {
   // Create a router configuration
@@ -19,6 +20,7 @@ function App() {
         { path: 'login', element: <Login /> },
         { path: 'register', element: <Register /> },
         { path: 'create-trip', element: <CreateTrip /> },
+        { path: 'hotel', element: <HotelReservation /> },
       ],
     },
   ]);

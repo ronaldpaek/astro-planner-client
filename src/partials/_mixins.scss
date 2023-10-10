@@ -42,6 +42,17 @@
   align-items: center;
 }
 
+@mixin save-button {
+  background-color: v.$primary-blue;
+  color: v.$color-light;
+  display: flex;
+  padding: 12px 40px;
+  justify-content: center !important;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  gap: 10px;
+}
 // Mixin to handle breakpoints
 @mixin breakpoint($breakpoint) {
   @if $breakpoint == 'small' {
