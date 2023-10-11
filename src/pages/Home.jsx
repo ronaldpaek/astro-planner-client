@@ -10,10 +10,10 @@ import EasyTripBooking from '@/components/EasyTripBooking';
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <TripPlanning />
       <EasyTripBooking />
-      <AirtravBestServices />
+      {/* <AirtravBestServices /> */}
       <DiscoverFeatures />
       <TwoWeekTripPlan />
     </>
