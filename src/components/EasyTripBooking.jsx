@@ -8,7 +8,7 @@ import book from '@/assets/book.svg';
 
 export default function EasyTripBooking() {
   return (
-    <section>
+    <section className="booking-section">
       <div className="main-container">
         <div className="big-card">
           <div className="big-card-content">
