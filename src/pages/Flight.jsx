@@ -8,7 +8,6 @@ const Flight = () => {
       className="reservation-container"
       style={{
         display: 'flex',
-        height: '70vh',
         backgroundImage: `url(${Map})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
