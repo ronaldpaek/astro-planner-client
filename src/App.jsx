@@ -8,6 +8,7 @@ import Register from '@/components/Register';
 import CreateTrip from '@/pages/CreateTrip';
 import HotelReservation from '@/pages/HotelReservation';
 
+
 function App() {
   // Create a router configuration
   const router = createBrowserRouter([
