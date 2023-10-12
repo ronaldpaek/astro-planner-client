@@ -17,7 +17,7 @@ const Flight = () => {
       <form className="reservation-wrapper flex-col">
         <div className="reservation-text">
           <img src={ReservationIcon} alt="reservation icon" />
-          <p>Enter Flight Reservation</p>
+          <h2>Enter Flight Reservation</h2>
         </div>
         <div className="input-wrapper">
           <label htmlFor="bookingConfirmation">Airline Confirmation</label>
@@ -25,59 +25,80 @@ const Flight = () => {
             type="text"
             id="bookingConfirmation"
             name="bookingConfirmation"
+            className="input-field"
             placeholder="Optional"
           />
           <div className="field-container">
             <div className="flex-col-start">
-              <label htmlFor="airline">Airline</label>
+              <label htmlFor="hotelName">Airline</label>
               <input
                 type="text"
-                id="airline"
-                name="airline"
-                placeholder="Enter the airline name"
+                id="hotelName"
+                name="hotelName"
+                placeholder="Enter an airline"
+                className="input-field"
               />
             </div>
             <div className="flex-col-start">
-              <label htmlFor="flight">Flight</label>
+              <label htmlFor="hotelPhone">Flight</label>
               <input
                 type="text"
-                id="flight"
-                name="flight"
+                id="hotelPhone"
+                name="hotelPhone"
                 placeholder="Optional"
+                className="input-field"
               />
             </div>
           </div>
-          <label htmlFor="departAirport">Depart Airport</label>
+          <label htmlFor="location">Depart Airport</label>
           <input
             type="text"
-            id="departAirport"
-            name="departAirport"
+            id="location"
+            name="location"
             placeholder="Entering Depart Airport"
+            className="input-field"
           />
-          <label htmlFor="arrivalAirport">Arrival Airport</label>
+          <label htmlFor="location">Arrival Airport</label>
           <input
             type="text"
-            id="arrivalAirport"
-            name="arrivalAirport"
+            id="location"
+            name="location"
             placeholder="Entering Arrival Airport"
+            className="input-field"
           />
           <div className="date-range">
             <div className="checkinDate-container flex-col-start">
-              <label htmlFor="departDate">Depart Date</label>
+              <label htmlFor="checkInDate">Depart Date</label>
               <div className="reservation-flex">
-                <input type="date" id="departDate" name="departDate" />
-                <div className="flex-col-start">
-                  <input type="time" id="departTime" name="departTime" />
-                </div>
+                <input
+                  type="date"
+                  id="checkInDate"
+                  name="checkInDate"
+                  className="date-time-field"
+                />
+                <input
+                  type="time"
+                  id="checkInTime"
+                  name="checkInTime"
+                  className="date-time-field"
+                />
               </div>
             </div>
             <div className="checkOutDate-container flex-col-start">
-              <label htmlFor="arrivalDate">Arrival Date</label>
-              <div className="flex">
-                <input type="date" id="arrivalDate" name="arrivalDate" />
-                <div className="flex-col">
-                  <input type="time" id="arrivalTime" name="arrivalTime" />
-                </div>
+              <label htmlFor="checkOutDate">Arrival Date</label>
+              <div className="reservation-flex">
+                <input
+                  type="date"
+                  id="checkOutDate"
+                  name="checkOutDate"
+                  className="date-time-field"
+                />
+                <input
+                  type="time"
+                  id="checkOutTime"
+                  name="checkOutTime"
+                  className="date-time-field"
+                />
               </div>
             </div>
           </div>

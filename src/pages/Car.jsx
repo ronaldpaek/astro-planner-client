@@ -17,7 +17,7 @@ const Car = () => {
       <form className="reservation-wrapper flex-col">
         <div className="reservation-text">
           <img src={ReservationIcon} alt="reservation icon" />
-          <p>Enter Car Reservation</p>
+          <h2>Enter Car Reservation</h2>
         </div>
         <div className="input-wrapper">
           <label htmlFor="bookingConfirmation">Booking Confirmation</label>

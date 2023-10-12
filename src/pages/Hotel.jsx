@@ -17,7 +17,7 @@ const Hotel = () => {
       <form className="reservation-wrapper flex-col">
         <div className="reservation-text">
           <img src={ReservationIcon} alt="reservation icon" />
-          <p>Enter Hotel / Apartment Reservation</p>
+          <h2>Enter Hotel / Apartment Reservation</h2>
         </div>
         <div className="input-wrapper">
           <label htmlFor="bookingConfirmation">Booking Confirmation</label>
@@ -25,6 +25,7 @@ const Hotel = () => {
             type="text"
             id="bookingConfirmation"
             name="bookingConfirmation"
+            className="input-field"
             placeholder="Optional"
           />
           <div className="field-container">
@@ -35,6 +36,7 @@ const Hotel = () => {
                 id="hotelName"
                 name="hotelName"
                 placeholder="Enter the hotel name"
+                className="input-field"
               />
             </div>
             <div className="flex-col-start">
@@ -44,6 +46,7 @@ const Hotel = () => {
                 id="hotelPhone"
                 name="hotelPhone"
                 placeholder="Optional"
+                className="input-field"
               />
             </div>
           </div>
@@ -53,24 +56,41 @@ const Hotel = () => {
             id="location"
             name="location"
             placeholder="Enter the location"
+            className="input-field"
           />
           <div className="date-range">
             <div className="checkinDate-container flex-col-start">
               <label htmlFor="checkInDate">Check-in Date</label>
-              <div className="flex">
-                <input type="date" id="checkInDate" name="checkInDate" />
-                <div className="flex-col-start">
-                  <input type="time" id="checkInTime" name="checkInTime" />
-                </div>
+              <div className="reservation-flex">
+                <input
+                  type="date"
+                  id="checkInDate"
+                  name="checkInDate"
+                  className="date-time-field"
+                />
+                <input
+                  type="time"
+                  id="checkInTime"
+                  name="checkInTime"
+                  className="date-time-field"
+                />
               </div>
             </div>
             <div className="checkOutDate-container flex-col-start">
               <label htmlFor="checkOutDate">Check-out Date</label>
               <div className="reservation-flex">
-                <input type="date" id="checkOutDate" name="checkOutDate" />
-                <div className="flex-col">
-                  <input type="time" id="checkOutTime" name="checkOutTime" />
-                </div>
+                <input
+                  type="date"
+                  id="checkOutDate"
+                  name="checkOutDate"
+                  className="date-time-field"
+                />
+                <input
+                  type="time"
+                  id="checkOutTime"
+                  name="checkOutTime"
+                  className="date-time-field"
+                />
               </div>
             </div>
           </div>
