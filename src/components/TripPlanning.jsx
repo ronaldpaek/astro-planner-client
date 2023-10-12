@@ -1,9 +1,9 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+
 import LightIcon from '@/assets/lightIcon.svg';
 import WebsiteIcon from '@/assets/websiteIcon.svg';
 import EbookIcon from '@/assets/eBookIcon.svg';
 import RightArrowIcon from '@/assets/rightArrow.svg';
-import { Link } from 'react-router-dom';
 
 export default function InnovativeTripPlanning() {
   return (
@@ -23,10 +23,9 @@ export default function InnovativeTripPlanning() {
           <div className="trip-card-content flex-col">
             <p>Partner allows you to browse multiple carriers for travel.</p>
           </div>
-          hi
           <Link to="/">
             <div className="learn-more">
-              <p className="learn-more-text">Learn more</p>
+              <p className="learn-more-text text">Learn more</p>
               <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
@@ -43,7 +42,7 @@ export default function InnovativeTripPlanning() {
           </div>
           <Link to="/">
             <div className="learn-more">
-              <p className="learn-more-text">Learn more</p>
+              <p className="learn-more-text text">Learn more</p>
               <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>
@@ -59,7 +58,7 @@ export default function InnovativeTripPlanning() {
           </div>
           <Link to="/">
             <div className="learn-more">
-              <p className="learn-more-text">Learn more</p>
+              <p className="learn-more-text text">Learn more</p>
               <img src={RightArrowIcon} alt="Learn more" />
             </div>
           </Link>

@@ -1,10 +1,10 @@
-import React from 'react';
-import heroImage from '../assets/hero-image.png';
 import { FaArrowRight } from 'react-icons/fa';
-import backgroundImage from '../assets/background-image.png';
-import reviewImage from '../assets/review.png';
-import swirlArrow from '../assets/swirl-arrow.png';
-import card from '../assets/card.png';
+
+import heroImage from '@/assets/hero-image.png';
+import backgroundImage from '@/assets/background-image.png';
+import reviewImage from '@/assets/review.png';
+import swirlArrow from '@/assets/swirl-arrow.png';
+import card from '@/assets/card.png';
 
 const Header = () => {
   return (

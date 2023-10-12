@@ -1,4 +1,3 @@
-import React from 'react';
 import Hotel from '@/assets/hotel.png';
 import Restaurant from '@/assets/restaurant.png';
 import Rout from '@/assets/rout.svg';
@@ -9,7 +8,7 @@ const AirtravBestServices = () => {
     <section className="airtrav-best-services">
       <div className="airtrav-best-services-container">
         <h2>Airtrav Best Services</h2>
-        <p>
+        <p className="light">
           Enjoy the best services offered by Airtrav and book amazing trips by
           plane.
         </p>

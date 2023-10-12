@@ -116,10 +116,12 @@
 
   .nav-elements {
     position: absolute;
+    z-index: 1;
     right: 0;
     top: 60px;
     width: 100%;
-    height: calc(100vh - 60px);
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 100%;
     transition: all 0.3s ease-in;
     overflow: hidden;
     transform: translateX(0);

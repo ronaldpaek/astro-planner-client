@@ -1,8 +1,7 @@
-import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import DarkModeToggle from './DarkModeToggle';
-import userProfilePhoto from '@/assets/userPhoto.png';
+import { NavLink, Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import { AiOutlineMenu } from 'react-icons/ai';
 import {
   FaHome,
@@ -13,10 +12,33 @@ import {
   FaQuestion,
   FaRegBell,
 } from 'react-icons/fa';
-import logoIcon from '@/assets/moon-logo-v2.svg';
 
-const Navigation = () => {
+import DarkModeToggle from '@/components/DarkModeToggle';
+import logoIcon from '@/assets/moon-logo-v2.svg';
+import userProfilePhoto from '@/assets/userPhoto.png';
+
+const fetchUser = async () => {
+  const token = localStorage.getItem('token');
+
+  if (!token) {
+    throw new Error('No token found');
+  }
+
+  const response = await axios.get('/auth/verify', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  return response.data;
+};
+
+const Navigation = ({ user, setUser }) => {
   const [showNavbar, setShowNavbar] = useState(false);
+  // const userQuery = useQuery({
+  //   queryKey: ['user'],
+  //   queryFn: async () => {},
+  // });
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
@@ -27,7 +49,7 @@ const Navigation = () => {
       <div className="navbar-container">
         <ul className="navbar-list">
           <div className="navbar-list-fullwidth">
-            <Link to="/" className="flex">
+            <NavLink to="/" className="flex">
               <li className="navbar-list-fullwidth">
                 <img
                   className="logo-icon"
@@ -39,7 +61,7 @@ const Navigation = () => {
               <li style={{ fontWeight: 'bold' }} className="logo-type hide ">
                 Astro Planner
               </li>
-            </Link>
+            </NavLink>
           </div>
 
           <div
@@ -54,22 +76,22 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="navbar-li">
-              <Link className="flex" to={'/things-to-do'}>
+              <NavLink className="flex" to={'/things-to-do'}>
                 <FaBriefcase className="icon" />
                 <span className="nav-text">To Do</span>
-              </Link>
+              </NavLink>
             </li>
             <li className="navbar-li">
-              <Link className="flex" to={'/tour'}>
+              <NavLink className="flex" to={'/tour'}>
                 <FaPlane className="icon" />
                 <span className="nav-text">Tour</span>
-              </Link>
+              </NavLink>
             </li>
             <li className="navbar-li">
-              <Link className="flex" to={'/blog'}>
+              <NavLink className="flex" to={'/blog'}>
                 <FaBlog className="icon" />
                 <span className="nav-text">Blog</span>
-              </Link>
+              </NavLink>
             </li>
           </div>
           <div

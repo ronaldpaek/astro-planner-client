@@ -9,11 +9,9 @@
   text-align: center;
 }
 
-
 .trip-planning-content {
   margin-bottom: v.$spacing-medium;
 }
-
 
 .trip-planning-card-container {
   display: flex;
@@ -31,6 +29,7 @@
   gap: 10px;
   max-width: 272px;
   height: 250px;
+  border-radius: 12px;
 }
 
 .trip-card:nth-child(1) {
@@ -77,8 +76,6 @@
 .learn-more-text {
   margin: 0;
 }
-
-
 
 .card-description {
   text-align: center;
