@@ -7,7 +7,7 @@ import AirtravBestServices from '@/components/AirtravBestServices';
 
 import DiscoverFeatures from '@/components/DiscoverFeatures';
 import EasyTripBooking from '@/components/EasyTripBooking';
-
+import HowItWorks from '../components/HowItWorks';
 
 const Home = () => {
   return (
@@ -15,6 +15,7 @@ const Home = () => {
       <Header />
       <TripPlanning />
       <EasyTripBooking />
+      <HowItWorks />
       <DiscoverFeatures />
       <TwoWeekTripPlan />
       <AirtravBestServices />
