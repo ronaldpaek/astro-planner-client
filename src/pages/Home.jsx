@@ -13,7 +13,7 @@ const Home = () => {
       <TripPlanning />
       <EasyTripBooking />
       <AirtravBestServices />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <DiscoverFeatures />
       <TwoWeekTripPlan />
     </>
