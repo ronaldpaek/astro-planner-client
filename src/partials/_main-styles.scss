@@ -118,6 +118,7 @@ button:focus {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 20px;
 }
 
 .flex-end {
@@ -129,6 +130,14 @@ button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 li {
   list-style-type: none;

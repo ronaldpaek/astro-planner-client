@@ -5,11 +5,16 @@
   background-color: v.$primary-blue;
   color: #fff;
   text-align: center;
+  .airtrav-best-services-container {
+    padding: v.$spacing-large;
+  }
+  .airtrav-best-services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
 }
 
-.airtrav-best-services-container {
-  padding: v.$spacing-large;
-}
 .service-icon {
   display: flex;
   padding: 9px 30px;
@@ -38,13 +43,24 @@
 }
 
 @include m.breakpoint('small') {
-  .airtrav-best-services-card {
+  .airtrav-best-services-cards {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
   }
   .service-card {
     min-width: 270px;
     min-height: 200px;
+  }
+}
+
+@include m.breakpoint('medium') {
+  .airtrav-best-services-cards {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .service-card {
+    width: 100%;
   }
 }
