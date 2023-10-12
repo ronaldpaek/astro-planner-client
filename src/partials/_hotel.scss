@@ -1,38 +1,106 @@
 @use './variables' as v;
 @use './mixins' as m;
 
-.hotel-reservation-container {
+.reservation-text {
   display: flex;
-  padding: 30px 24px;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+}
+.reservation-container {
+  padding: 30px 50px;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  min-width: 100%;
-  border-radius: 5px;
-  background-color: v.$color-light;
-  margin-bottom: 20px;
 }
-.hotel-confirmation {
+
+.reservation-wrapper {
+  display: inline-flex;
+  padding: 24px 26px 24px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   box-shadow: v.$box-shadow-small;
-  padding: 50px 42px;
-  margin: v.$spacing-large;
-  border-radius: 5px;
-  background-color: v.$color-light;
-  margin-bottom: 20px;
   border-radius: 12px;
+  background: #fff;
 }
-.hotel-text {
-  margin-bottom: v.$spacing-small;
-}
-#bookingConfirmation {
-  width: 50%;
-}
-.hotel-reservation-container input {
+
+.reservation-text {
   margin: 0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.reservation-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 .save-button {
   @include m.save-button;
+  text-align: center;
 }
-@include m.breakpoint('small') {
+
+.date-range {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 100%;
+}
+
+.field-container {
+  display: flex;
+  gap: 24px;
+}
+
+/* Update the following IDs to use classes for consistency */
+.booking-confirmation,
+.agency-name,
+.car-type,
+.pickup-location,
+.dropoff-location,
+.pickupDate,
+.checkoutDate,
+.pickupTime,
+.checkoutTime,
+.dropoffDate,
+.dropoffTime {
+  width: 100%;
+  min-width: 200px;
+}
+.date-time-field {
+  min-width: calc(400px / 2 - 30px);
+}
+
+@media (min-width: 1000px) {
+  //   .input-field {
+  //     max-width: 200px;
+  //   }
+
+  .field-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .date-range {
+    flex-direction: row !important;
+  }
+  .date-time-field {
+    min-width: calc(400px / 2 - 30px);
+  }
+  .input-field {
+    min-width: 400px;
+  }
 }
