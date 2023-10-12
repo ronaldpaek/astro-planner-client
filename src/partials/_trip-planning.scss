@@ -30,6 +30,8 @@
   max-width: 272px;
   height: 250px;
   border-radius: 12px;
+  position: relative;
+  width: 100%;
 }
 
 .trip-card:nth-child(1) {
@@ -39,6 +41,7 @@
 .trip-card:nth-child(2) {
   background-color: #fff4ee;
 }
+
 .trip-card:nth-child(3) {
   background-color: #ebf1ff;
 }
@@ -47,23 +50,35 @@
 .website-icon,
 .ebook-icon {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  padding: 10px;
   text-align: center;
 }
 
 .light-icon {
   background-color: v.$success-color;
+  img {
+    flex: 1 0 auto;
+    margin: 10px;
+  }
 }
 
 .website-icon {
   background-color: v.$secondary-orange;
+  img {
+    flex: 1 0 auto;
+    margin: 10px;
+  }
 }
 
 .ebook-icon {
+  img {
+    flex: 1 0 auto;
+    margin: 10px;
+  }
   background-color: v.$primary-blue;
 }
 
@@ -81,6 +96,7 @@
   text-align: center;
   line-height: 1.5;
   word-wrap: break-word;
+  flex-grow: 1;
 }
 
 @include m.breakpoint('small') {
@@ -89,7 +105,29 @@
     align-items: center;
 
     .trip-card {
-      width: 80%;
+      width: 100%;
+      padding: 50px;
     }
+  }
+}
+@include m.breakpoint('medium') {
+  .trip-planning-card-container {
+    flex-wrap: wrap;
+    gap: 24px;
+    .trip-card {
+      width: 100%;
+    }
+  }
+}
+@include m.breakpoint('large') {
+  .trip-card {
+    margin-right: 0;
+    padding: 30px 50px;
+  }
+
+  .trip-card .light-icon,
+  .trip-card .website-icon,
+  .trip-card .ebook-icon {
+    margin-right: 10px;
   }
 }

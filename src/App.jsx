@@ -5,7 +5,10 @@ import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
-import CreateTrip from '@/components/CreateTrip';
+import CreateTrip from '@/pages/CreateTrip';
+import Hotel from '@/pages/Hotel';
+import Flight from '@/pages/Flight';
+import Car from '@/pages/Car';
 
 function App() {
   // Create a router configuration
@@ -19,6 +22,9 @@ function App() {
         { path: 'login', element: <Login /> },
         { path: 'register', element: <Register /> },
         { path: 'create-trip', element: <CreateTrip /> },
+        { path: 'hotel', element: <Hotel /> },
+        { path: 'flight', element: <Flight /> },
+        { path: 'car', element: <Car /> },
       ],
     },
   ]);

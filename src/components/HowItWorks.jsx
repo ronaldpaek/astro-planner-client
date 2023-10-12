@@ -14,7 +14,7 @@ export default function HowItWorks() {
 
         <div className="how-it-works-container ">
           <div className="how-it-works-heading">
-            <h1 className="how-it-works-title">How does it work</h1>
+            <h2 className="features-text">How does it work</h2>
             <p className="how-it-works-description">
               We find the absolute best prices on hotels & flights then we pass
               these savings directly to you.

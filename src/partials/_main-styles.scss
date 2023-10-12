@@ -72,7 +72,7 @@ img {
 
 button:hover,
 button:focus {
-  background-color: v.$color-gray-5;
+  background-color: v.$hover-color;
   color: v.$color-gray-1;
 }
 
@@ -98,6 +98,10 @@ button:focus {
   padding: 20px;
 }
 
+input,
+label {
+  margin: 0;
+}
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -118,6 +122,7 @@ button:focus {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 20px;
 }
 
 .flex-end {
@@ -129,6 +134,14 @@ button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 li {
   list-style-type: none;
@@ -146,6 +159,10 @@ li {
 
 .block {
   display: block;
+}
+
+.center {
+  text-align: center !important;
 }
 @include m.breakpoint('small') {
   .flex-col {
