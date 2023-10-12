@@ -27,8 +27,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  max-width: 272px;
-  height: 250px;
+  //   max-width: 272px;
+  //   height: 250px;
   border-radius: 12px;
   position: relative;
   width: 100%;
@@ -112,7 +112,7 @@
 }
 @include m.breakpoint('medium') {
   .trip-planning-card-container {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 24px;
     .trip-card {
       width: 100%;
