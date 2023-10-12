@@ -12,7 +12,7 @@ const AirtravBestServices = () => {
           Enjoy the best services offered by Airtrav and book amazing trips by
           plane.
         </p>
-        <div className="airtrav-best-services-cards flex">
+        <div className="airtrav-best-services-cards">
           <article className="service-card">
             <figure className="service-icon ">
               <img src={Hotel} size={24} alt="hotel icon" className="blue" />
