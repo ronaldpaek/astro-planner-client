@@ -1,5 +1,5 @@
 import howItWorks from '@/assets/howItWorks.png';
-import userIcon from '@/assets/usericon.svg';
+import userIcon from '@/assets/userIcon.svg';
 import mapIcon from '@/assets/mapIcon.svg';
 import navigateIcon from '@/assets/navigateIcon-v2.svg';
 import flightIcon from '@/assets/flightIcon-v2.svg';
