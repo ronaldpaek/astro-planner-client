@@ -3,7 +3,7 @@
 
 .reservation-text {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   p {
@@ -12,7 +12,6 @@
 }
 .reservation-container {
   padding: 30px 50px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,10 +19,10 @@
 }
 
 .reservation-wrapper {
-  display: inline-flex;
+  display: flex;
   padding: 24px 26px 24px 24px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
   box-shadow: v.$box-shadow-small;
   border-radius: 12px;
@@ -43,14 +42,16 @@
 
 .reservation-flex {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 24px;
 }
 .save-button {
   @include m.save-button;
   text-align: center;
 }
-
+.input-field {
+  max-width: 200px;
+}
 .date-range {
   display: flex;
   flex-direction: column;
@@ -61,39 +62,53 @@
 
 .field-container {
   display: flex;
+  flex-direction: column;
   gap: 24px;
+  justify-content: flex-start;
 }
 
-/* Update the following IDs to use classes for consistency */
-.booking-confirmation,
-.agency-name,
-.car-type,
-.pickup-location,
-.dropoff-location,
-.pickupDate,
-.checkoutDate,
-.pickupTime,
-.checkoutTime,
-.dropoffDate,
-.dropoffTime {
-  width: 100%;
-  min-width: 200px;
-}
 .date-time-field {
   min-width: calc(400px / 2 - 30px);
 }
 
 @media (min-width: 1000px) {
-  //   .input-field {
-  //     max-width: 200px;
-  //   }
+  .reservation-text {
+    flex-direction: row;
+  }
 
+  .reservation-container {
+    height: 100vh;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .reservation-wrapper {
+    width: unset;
+    display: inline-flex;
+  }
+
+  .reservation-wrapper {
+    width: unset;
+    display: inline-flex;
+    display: flex;
+    padding: 24px 26px 24px 24px;
+    // flex-direction: column;
+    // align-items: center;
+    gap: 16px;
+    box-shadow: v.$box-shadow-small;
+    border-radius: 12px;
+    background: #fff;
+  }
   .field-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-
+  .reservation-flex {
+    flex-direction: row;
+  }
   .date-range {
     flex-direction: row !important;
   }
