@@ -105,22 +105,21 @@
     align-items: center;
 
     .trip-card {
-      width: 80%;
+      width: 100%;
       padding: 50px;
     }
   }
 }
 @include m.breakpoint('medium') {
-  .trip-card {
-    width: 100%;
-    padding: 0;
-  }
-}
-@include m.breakpoint('large') {
   .trip-planning-card-container {
     flex-wrap: wrap;
     gap: 24px;
+    .trip-card {
+      width: 100%;
+    }
   }
+}
+@include m.breakpoint('large') {
   .trip-card {
     margin-right: 0;
     padding: 30px 50px;
