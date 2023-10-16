@@ -3,41 +3,32 @@ import {
   BiLogoGooglePlusCircle,
   BiLogoTwitter,
 } from 'react-icons/bi';
-import axios from 'axios';
-import { Link, useOutletContext, useNavigate } from 'react-router-dom';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+
+import { Link, useNavigate } from 'react-router-dom';
+
+import useLogin from '@/hooks/useLogin';
+import { useToken } from '@/contexts/TokenContext';
 
 const Login = () => {
-  const queryClient = useQueryClient();
-  const { setUser } = useOutletContext();
   const navigate = useNavigate();
+  const { setToken } = useToken();
 
-  const mutation = useMutation({
-    mutationFn: (formData) => {
-      console.log('formData', formData);
-      console.log('vite', import.meta.env.VITE_BASE_API_URL);
-      return axios.post(
-        `${import.meta.env.VITE_BASE_API_URL}/users/login`,
-        formData
-      );
-    },
-    onSuccess: (res) => {
-      console.log('res', res);
-      console.log('res', res.data);
-      setUser(res.data.user);
-      queryClient.invalidateQueries({ queryKey: ['user'] });
-      navigate('/');
-    },
+  const login = useLogin((data) => {
+    console.log('response', data);
+    // Store the token in localStorage
+    localStorage.setItem('token', data.token);
+    // Set the token in the client
+    setToken(data.token);
+    // Navigate to the home page
+    navigate('/');
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    console.log('formData', formData);
     const formJson = Object.fromEntries(formData);
-    console.log('formJson', formJson);
-    mutation.mutate(formJson);
+    login.mutate(formJson);
   };
 
   return (

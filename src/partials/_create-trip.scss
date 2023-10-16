@@ -1,6 +1,14 @@
 @use './variables' as v;
 @use './mixins' as m;
 
+.create-trip-container {
+  padding: 200px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .create-trip-form {
   display: flex;
   align-items: center;
@@ -23,12 +31,12 @@
 
       input {
         flex: 1;
-        margin-right: 8px;
         margin-bottom: 8px;
       }
     }
   }
 }
+
 .create-trip-button {
   @include m.form-button;
   width: 100%;

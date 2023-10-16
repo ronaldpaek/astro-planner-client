@@ -1,39 +1,28 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import Navigation from '@/components/Navigation';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const Layout = () => {
-  const [showNavbar, setShowNavbar] = useState(false);
-  const [user, setUser] = useState(null);
-
-  const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar);
-  };
+  const [trips, setTrips] = useState([]);
+  const [reservations, setReservations] = useState([]);
 
   return (
-    <>
-      <div>
-        {window.innerWidth < 768 ? (
-          <Navigation
-            handleShowNavbar={handleShowNavbar}
-            user={user}
-            setUser={setUser}
-          />
-        ) : (
-          <Navigation
-            handleShowNavbar={handleShowNavbar}
-            user={user}
-            setUser={setUser}
-          />
-        )}
-      </div>
+    <div>
+      <Navbar />
       <main>
-        <Outlet context={{ user, setUser }} />
+        <Outlet
+          context={{
+            trips,
+            setTrips,
+            reservations,
+            setReservations,
+          }}
+        />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
